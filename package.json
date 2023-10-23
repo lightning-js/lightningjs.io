@@ -1,0 +1,24 @@
+{
+  "name": "lightning-site",
+  "version": "1.0.0",
+  "description": "lightning nexus of information",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev site",
+    "docs:build": "vitepress build site",
+    "docs:preview": "vitepress preview site"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "vitepress": "^1.0.0-rc.20",
+    "vue": "^3.3.4"
+  },
+  "postcss": {
+		"plugins": {
+			"tailwindcss": {},
+			"autoprefixer": {}
+		}
+	}
+}
