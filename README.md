@@ -28,6 +28,7 @@ http://localhost:4173/blogs/*.md
 ```
 
 ## BlogsLayout
+Blogs layout will automatically sort all the markdown files in the `blogs` directory on a single page from newest to oldest by date.
 
 ```
 http://localhost:4173/blogs
