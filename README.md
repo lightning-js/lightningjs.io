@@ -33,6 +33,3 @@ Blogs layout will automatically sort all the markdown files in the `blogs` direc
 ```
 http://localhost:4173/blogs
 ```
-
-
-
