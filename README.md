@@ -1,8 +1,9 @@
 # lightningjs.io
 
-Lightning website
+Lightningjs website, source for Lightningjs information regarding all ecosystems.
 
-
+## Collaborate
+Find any problems on the site or mistakes in information? Help us out resolving the problem!
 
 ## Usage
 Clone repository and follow these steps;
