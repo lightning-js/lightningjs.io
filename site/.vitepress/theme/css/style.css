@@ -137,3 +137,11 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.VPNavBar .title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.VPImage {
+  margin-left: 8px;
+}

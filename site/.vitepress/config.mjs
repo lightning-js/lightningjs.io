@@ -2,17 +2,20 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Lightning Site",
-  description: "Lightning Nexus of Information",
+  title: "Lightningjs Site",
+  description: "Lightningjs Nexus of Information",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/examples/markdown-examples' }
+      { text: 'News', link: '/blogs'}
+      // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
-    search: {
-      provider: 'local'
-    },
+    siteTitle: 'Lightningjs',
+    logo: '/lng.svg',
+    // search: {
+    //   provider: 'local'
+    // },
     sidebar: {
       '/examples/': [
         {
@@ -26,7 +29,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/lightning-js' }
     ]
   }
 })

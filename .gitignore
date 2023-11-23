@@ -11,3 +11,4 @@ build
 releases
 .tmp
 .env
+.vitepress/cache
