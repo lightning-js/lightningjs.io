@@ -1,0 +1,42 @@
+
+
+#hero {
+	padding:0;
+	margin: 0;
+	height: 60vh;
+  	background-color: #020617; 
+ 	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(15, 23, 42,1) 100%);
+	
+}
+
+#stars {
+	display: block;
+	position: relative;
+	width: 100vw;
+	height: 60vh;
+	z-index: 1;
+	-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);
+	mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);
+}
+
+
+
+@media (min-width: 640px) { 
+	#stars {
+		height: 60vh;
+	} }
+
+@media (min-width: 768px) { 
+
+	#stars {
+		height: 70vh;
+	}
+ }
+@media (min-width: 1024px) { 
+	#stars {
+	height: 75vh;
+} }
+@media (min-width: 1289px) { 
+	#stars {
+	height: 80vh;
+} }
