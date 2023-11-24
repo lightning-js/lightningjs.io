@@ -17,9 +17,12 @@
     "vue": "^3.3.4"
   },
   "postcss": {
-		"plugins": {
-			"tailwindcss": {},
-			"autoprefixer": {}
-		}
-	}
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+    "delaunay-fast": "^1.0.1"
+  }
 }

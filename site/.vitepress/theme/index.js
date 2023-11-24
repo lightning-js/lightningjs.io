@@ -22,6 +22,7 @@ import './css/style.css'
 import './css/tailwind.postcss'
 import BlogLayout from './layouts/BlogLayout.vue';
 import BlogsLayout from './layouts/BlogsLayout.vue';
+import HomeLayout from './layouts/HomeLayout.vue';
 
 export default {
   extends: Theme,
@@ -38,5 +39,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.component('blog', BlogLayout)
     app.component('blogs', BlogsLayout)
+    app.component('home2', HomeLayout)
   }
 }

@@ -1,7 +1,7 @@
 ---
 
 # https://vitepress.dev/reference/default-theme-home-page
-layout: home
+layout: home2
 
 hero:
   name: "Lightning Site"
