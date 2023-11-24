@@ -142,6 +142,6 @@
   flex-direction: row-reverse;
 }
 
-.VPImage {
+.VPImage .logo {
   margin-left: 8px;
 }
