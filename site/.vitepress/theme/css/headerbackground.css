@@ -34,7 +34,7 @@
  }
 @media (min-width: 1024px) { 
 	#stars {
-	height: 75vh;
+	height: vh;
 } }
 @media (min-width: 1289px) { 
 	#stars {
