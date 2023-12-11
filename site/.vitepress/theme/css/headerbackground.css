@@ -3,8 +3,7 @@
 #hero {
 	padding:0;
 	margin: 0;
-	height: 60vh;
-  	background-color: #020617; 
+	height: 70vh;
  	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(15, 23, 42,1) 100%);
 	
 }
@@ -13,7 +12,7 @@
 	display: block;
 	position: relative;
 	width: 100vw;
-	height: 60vh;
+	height: 70vh;
 	z-index: 1;
 	-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);
 	mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);

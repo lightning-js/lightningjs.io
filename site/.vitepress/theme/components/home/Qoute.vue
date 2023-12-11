@@ -1,5 +1,5 @@
 <template >
-    <div class="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-48">
+    <div class="mx-auto max-w-2xl pt-32">
         <section class="relative isolate overflow-hidden px-6 lg:px-8 ">
          <div class="mb-8 flex justify-center">
             <img class="max-auto h-14" src="lightning_logo_light.png" alt="img" />

@@ -2,10 +2,10 @@
 import FeatureCard from './FeatureCard.vue';
  
   const dataFeatures = [
-    { title: 'New and improved from rendering ',img:'src/assets/website_new.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'},
-    { title: 'Dynamic shaders ',img:'src/assets/website__gradient_.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
-    { title: 'Batched rendering',img:'src/assets/website__00215_.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
-    { title: 'Multithreading ',img:'./website__mutithreading.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'  },
+    { title: 'New and improved from rendering ',img:'./.vitepress/theme/assets/website_new.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'},
+    { title: 'Dynamic shaders ',img:'./.vitepress/theme/assets/website__gradient_.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
+    { title: 'Batched rendering',img:'./.vitepress/theme/assets/website__mutithreading.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
+    { title: 'Multithreading ',img:'./.vitepress/theme/assets/website__mutithreading.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'  },
   ]
 
 

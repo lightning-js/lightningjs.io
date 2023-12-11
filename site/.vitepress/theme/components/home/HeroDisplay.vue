@@ -11,10 +11,10 @@ import HeroVideo from './HeroVideo.vue'
 
 </script>
 <template>
-    <div class="absolute inset-0" id="hero">
+    <div class="absolute inset-0  bg-black dark:bg-[#020617]" id="hero">
         <canvas id="stars" width="300" height="300"></canvas>
     </div>
-    <div class="z-20 relative px-6 pt-14 lg:px-8">
+    <div class="z-10 relative px-6 pt-14 lg:px-8">
         <div class="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
