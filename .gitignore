@@ -11,3 +11,4 @@ releases
 .vitepress/cache/
 .vitepress/dist
 .vitepress/dist/
+public
