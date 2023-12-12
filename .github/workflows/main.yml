@@ -10,30 +10,55 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  # This workflow contains a single job called "build"
+  # Build job
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: setup node.js
-        uses: actions/setup-node@v4
-
-      # Runs a set of commands using the runners shell
-      - name: Install and build
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      # - uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
+      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm # or pnpm / yarn
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Install dependencies
+        run: npm ci # or pnpm install / yarn install / bun install
+      - name: Build with VitePress
         run: |
-          npm install
-          npm run docs:build
+          npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
+          touch public/.nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs/.vitepress/dist
 
-      - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with: 
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
