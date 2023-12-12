@@ -37,10 +37,9 @@ var particleCount = 40,
 	noiseLength = 1000,
 	noiseStrength = 1;
 
-var canvas = document.getElementById('stars');
+var canvas = null;
 	//orbits = document.getElementById('orbits'),
-	console.log('derp', canvas)
-var context = canvas.getContext('2d'),
+var context = null,
 	mouse = { x: 0, y: 0 },
 	m = {},
 	r = 0,
@@ -57,9 +56,10 @@ var context = canvas.getContext('2d'),
 	particles = [],
 	flares = [];
 
-function init() {
+export function init() {
 	var i, j, k;
-
+	canvas = document.getElementById('stars');
+	context = canvas.getContext('2d');
 	// requestAnimFrame polyfill
 	window.requestAnimFrame = (function(){
 		return  window.requestAnimationFrame ||
@@ -557,7 +557,3 @@ function random(min, max, float) {
 		Math.random() * (max - min) + min :
 		Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
-// init
-if (canvas) init();

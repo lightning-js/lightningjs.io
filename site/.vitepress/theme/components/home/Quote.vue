@@ -1,8 +1,11 @@
+<script setup>
+import lightning_logo_light from '../../../../assets/home/lightning_logo_light.png'
+</script>
 <template >
     <div class="mx-auto max-w-2xl pt-32">
         <section class="relative isolate overflow-hidden px-6 lg:px-8 ">
          <div class="mb-8 flex justify-center">
-            <img class="max-auto h-14" src="lightning_logo_light.png" alt="img" />
+            <img class="max-auto h-28" :src="lightning_logo_light" alt="img" />
         </div>  
         <figure class="mt-10 ">
             <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl text-center">“The power of native performance in your browser”</h1>

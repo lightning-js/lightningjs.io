@@ -1,12 +1,11 @@
-<script >
-import HeroVideo from './HeroVideo.vue'
+<script>
+import * as HeaderBackground from './headerbackground.js';
+import '../../css/headerbackground.css';
 
-    import '../../css/headerbackground.css';
     export default{
-        async created() {
-         await import( './headerbackground.js');
-        },
-        components: {HeroVideo}
+        mounted() {
+            HeaderBackground.init();
+        }
     }
 
 </script>
@@ -29,6 +28,5 @@ import HeroVideo from './HeroVideo.vue'
             </div>
           </div>
         </div>
-        <HeroVideo class="hidden"/>
       </div>
 </template>

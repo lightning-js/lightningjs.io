@@ -1,11 +1,14 @@
 <script>
 import FeatureCard from './FeatureCard.vue';
- 
+import website_new from '../../../../assets/home/website_new.png';
+import website_gradient from '../../../../assets/home/website_gradient.png';
+import website_multi from '../../../../assets/home/website_multithreading.png';
+
   const dataFeatures = [
-    { title: 'New and improved from rendering ',img:'./.vitepress/theme/assets/website_new.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'},
-    { title: 'Dynamic shaders ',img:'./.vitepress/theme/assets/website__gradient_.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
-    { title: 'Batched rendering',img:'./.vitepress/theme/assets/website__mutithreading.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
-    { title: 'Multithreading ',img:'./.vitepress/theme/assets/website__mutithreading.png', description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'  },
+    { title: 'New and improved from rendering ',img: website_new, description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'},
+    { title: 'Dynamic shaders ',img: website_gradient, description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
+    { title: 'Batched rendering',img: website_multi, description:'Some text to give a generaal idee wat kind of long texr can be place on this spot'},
+    { title: 'Multithreading ',img: website_multi, description:'Some text to give a generaal idee wat kind of long texr can be place on this spot', style:'md:col-span-2'  },
   ]
 
 
@@ -14,12 +17,6 @@ export default {
     return {
       dataFeatures
     }
-  },
-  mounted() {
-    console.log('new feature mounted')
-  },
-  activated() {
-    console.log('halloooooooooo')
   },
   components: {FeatureCard}
 }

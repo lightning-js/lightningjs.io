@@ -1,6 +1,6 @@
 <script setup>
 import HeroDisplay from '../components/home/HeroDisplay.vue'
-import Qoute from '../components/home/Qoute.vue'
+import Quote from '../components/home/Quote.vue'
 import NewFeature from '../components/home/NewFeature.vue'
 import Footer from '../components/home/Footer.vue'
 import JoinDiscord from '../components/home/JoinDiscord.vue'
@@ -19,7 +19,7 @@ const solidInfo = {
 <template>
     <main class=" bg-slate-100 dark:bg-[#020617]">
         <HeroDisplay/>
-        <Qoute/>
+        <Quote/>
         <NewFeature/>
         <JoinDiscord/>
         <BlitsPlus :data="blitsInfo"/>
