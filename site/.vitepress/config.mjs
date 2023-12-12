@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
+  outDir: "../public",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

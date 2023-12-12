@@ -1,6 +1,8 @@
 
 <script setup>
 import DataFooter from './DataFooter.vue';
+import github_mark from '../../../../assets/home/github-mark-white.svg';
+import discord_white from '../../../../assets/home/discord-mark-white.png'
 
   const dataFooters = [
     { title: 'Lighting - Rendere', description:'Lightning Blits is our own templating engine uses XML string literals for a quick and easy Application Developer Experience.', url:'https://lightning-js.github.io/blits/#/', label: 'Read me'},
@@ -10,8 +12,8 @@ import DataFooter from './DataFooter.vue';
 ]
 
    const dataLinks = [
-     {  url:'https://github.com/lightning-js', icon:'github-mark-white.svg'},
-     {  url:'https://discord.com/invite/Mpj4HjHyh8', icon:'discord-mark-white.png'},
+     {  url:'https://github.com/lightning-js', icon: github_mark},
+     {  url:'https://discord.com/invite/Mpj4HjHyh8', icon: discord_white},
   
 ]
 </script>
