@@ -7,8 +7,8 @@ build
 releases
 .tmp
 .env
-.vitepress/cache
-.vitepress/cache/
-.vitepress/dist
-.vitepress/dist/
+site/.vitepress/cache
+site/.vitepress/cache/
+site/.vitepress/dist
+site/.vitepress/dist/
 public
