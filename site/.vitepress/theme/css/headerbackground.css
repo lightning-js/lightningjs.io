@@ -3,7 +3,7 @@
 #hero {
 	padding:0;
 	margin: 0;
-	height: 70vh;
+	height: 90vh;
  	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(15, 23, 42,1) 100%);
 	
 }
@@ -20,22 +20,41 @@
 
 
 
+
+@media (max-width:640px){
+	#hero{
+		height: 60vh;
+	}
+}
 @media (min-width: 640px) { 
+	#hero{
+		height: 80vh;
+	}
 	#stars {
 		height: 60vh;
 	} }
 
 @media (min-width: 768px) { 
-
+	#hero{
+		height: 80vh;
+	}
 	#stars {
 		height: 70vh;
 	}
  }
+
 @media (min-width: 1024px) { 
+	#hero{
+		height: 85vh;
+	}
 	#stars {
-	height: vh;
+	height: 80vh;
 } }
+
 @media (min-width: 1289px) { 
+	#hero{
+		height: 85vh;
+	}
 	#stars {
 	height: 80vh;
 } }

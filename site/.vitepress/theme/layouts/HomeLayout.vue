@@ -7,7 +7,9 @@ import JoinDiscord from '../components/home/JoinDiscord.vue'
 import BlitsPlus from '../components/home/BlitsPlus.vue'
 
 const blitsInfo = {
-  title: 'Blits'
+  title: 'Blits',
+  description: 'Lightning Blits is our own App Development Framework.',
+  img: 'site/.vitepress/theme/assets/website__mutithreading.png',
 }
 
 const solidInfo = {

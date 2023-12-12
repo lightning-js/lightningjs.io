@@ -26,9 +26,10 @@ export default {
 
 </script>
 <template>
-
     <section class="pt-32 relative isolate overflow-hidden px-6 lg:px-8 ">
-        <h1 class="text-5xl text-center font-bold pb-10 from-blue-200 via-purple-700 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">New Features</h1>
+      <div class="divide-y divide-blue-200">
+
+      </div>        <h1 class="text-5xl text-center font-bold pb-10 from-blue-200 via-purple-700 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">New Features</h1>
         <div class="grid gap-3 md:grid-cols-3">
             <FeatureCard v-for="data in dataFeatures" :feature="data"/>
         </div>
