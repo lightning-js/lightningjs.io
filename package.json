@@ -23,7 +23,6 @@
     }
   },
   "dependencies": {
-    "delaunay-fast": "^1.0.1",
-    "vue-plyr": "^7.0.0"
+    "delaunay-fast": "^1.0.1"
   }
 }
