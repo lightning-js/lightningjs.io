@@ -16,7 +16,6 @@
  */
 
 import { createContentLoader } from 'vitepress'
-
 export default createContentLoader('./blogs/*.md', {
     excerpt: true,
     
@@ -28,7 +27,7 @@ export default createContentLoader('./blogs/*.md', {
                 title: page.frontmatter.title,
                 date: page.frontmatter.date,
                 description: page.frontmatter.description,
-                link: page.url
+                link: `.` + page.url
             }
           })
     }
