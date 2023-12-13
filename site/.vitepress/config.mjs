@@ -34,8 +34,5 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' }
     ]
-  },
-  vite: {
-    base: "/lightningjs.io/"
   }
 })
