@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import lng_logo from '../lng.svg'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/lng.svg',
+    logo: lng_logo,
     // search: {
     //   provider: 'local'
     // },
@@ -35,6 +36,6 @@ export default defineConfig({
     ]
   },
   vite: {
-    base: "./"
+    base: "/lightningjs.io/"
   }
 })
