@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "./",
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
@@ -32,5 +33,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' }
     ]
+  },
+  vite: {
+    base: "./"
   }
 })
