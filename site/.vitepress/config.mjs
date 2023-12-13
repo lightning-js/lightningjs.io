@@ -1,6 +1,4 @@
 import { defineConfig } from 'vitepress'
-import lng_logo from '../lng.svg'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/lightningjs.io/",
@@ -34,5 +32,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' }
     ]
+  },
+  vite: {
+    base: "/lightningjs.io/"
   }
 })
