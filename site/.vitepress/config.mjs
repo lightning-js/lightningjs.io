@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "./",
+  base: "/lightningjs.io/",
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
