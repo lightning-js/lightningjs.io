@@ -157,8 +157,5 @@
 .VPNavBar .title {
   display: flex;
   flex-direction: row-reverse;
-}
-
-.VPImage .logo {
-  margin-left: 8px;
+  gap: 8px;
 }

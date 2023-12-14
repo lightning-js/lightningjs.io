@@ -6,7 +6,8 @@ export default defineConfig({
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "./assets/favicons/logo.svg"}]
+    ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "./assets/favicons/lng_16x16.png"}],
+    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "./assets/favicons/lng_32x32.png"}]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -16,7 +17,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/assets/favicons/lng.svg',
+    logo: './assets/favicons/lng_32x32.png',
     // search: {
     //   provider: 'local'
     // },
