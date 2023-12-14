@@ -77,16 +77,16 @@ function onClassChange(node, callback) {
 	return mutationObserver;
 }
 
-onClassChange(document.documentElement, (observer) => {
-	if(document.documentElement.classList.contains('dark')) {
-		color = darkColor
-	}
-	else {
-		color = lightColor
-	}
-});
-
 export function init() {
+	onClassChange(document.documentElement, (observer) => {
+		if(document.documentElement.classList.contains('dark')) {
+			color = darkColor
+		}
+		else {
+			color = lightColor
+		}
+	});
+	
 	var i, j, k;
 	canvas = document.getElementById('stars');
 	context = canvas.getContext('2d');
