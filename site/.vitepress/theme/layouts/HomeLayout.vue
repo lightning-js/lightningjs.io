@@ -15,7 +15,7 @@ const solidInfo = {
 }
 </script>
 <template>
-    <main class=" bg-slate-100 dark:bg-[#020617]">
+    <main class="mx-auto max-w-screen-lg bg-slate-100 dark:bg-[#020617]">
         <HeroDisplay/>
         <Quote/>
         <NewFeature/>

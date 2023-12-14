@@ -10,13 +10,13 @@ import '../../css/headerbackground.css';
 
 </script>
 <template>
-    <div class="absolute inset-0  bg-black dark:bg-[#020617]" id="hero">
+    <div class="absolute inset-0  bg-slate-100 dark:bg-[#020617]" id="hero">
         <canvas id="stars" width="300" height="300"></canvas>
     </div>
-    <div class="z-10 relative px-6 pt-14 lg:px-8">
-        <div class="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56">
+    <div class="z-10 relative px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl pt-20 sm:pt-28">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-900 dark:text-gray-200 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Lightningjs 3.0 <a href="https://lightning-js.github.io/blits/#/" target="_blank" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
             </div>
         </div>
