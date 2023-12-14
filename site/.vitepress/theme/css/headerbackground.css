@@ -1,5 +1,3 @@
-
-
 #hero {
 	padding:0;
 	margin: 0;
@@ -22,6 +20,7 @@
 }
 
 @media (min-width: 640px) { 
+
 	#stars {
 		height: 60vh;
 	} }
@@ -31,6 +30,7 @@
 		height: 70vh;
 	}
  }
+
 @media (min-width: 1024px) { 
 	#stars {
 		height: 80vh;

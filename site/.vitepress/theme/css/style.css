@@ -129,7 +129,6 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
-
 :root {
   --vp-c-bg: hsl(210, 40%, 96%)
 }
@@ -162,3 +161,4 @@
 .VPImage .logo {
   margin-left: 8px;
 }
+
