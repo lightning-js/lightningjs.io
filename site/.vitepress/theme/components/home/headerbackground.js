@@ -4,13 +4,14 @@ import Delaunay from 'delaunay-fast';
  * Inspired by Steve Courtney's poster art for Celsius GS's Drifter - http://celsiusgs.com/drifter/posters.php
  * by Cory Hughart - http://coryhughart.com
  */
-
+var lightColor = '#1a3199',
+	darkColor = '#d4f9ff';
 // Settings
 var particleCount = 40,
 	flareCount = 10,
 	motion = 0.10,
 	tilt = 0.05,
-	color = '#d4f9ff',
+	color = lightColor,
 	particleSizeBase = 1,
 	particleSizeMultiplier = 0.5,
 	flareSizeBase = 100,
@@ -56,7 +57,36 @@ var context = null,
 	particles = [],
 	flares = [];
 
+function onClassChange(node, callback) {
+	let lastClassString = node.classList.toString();
+	
+	const mutationObserver = new MutationObserver((mutationList) => {
+		for (const item of mutationList) {
+		if (item.attributeName === "class") {
+			const classString = node.classList.toString();
+			if (classString !== lastClassString) {
+			callback(mutationObserver);
+			lastClassString = classString;
+			break;
+			}
+		}
+		}
+	});
+	
+	mutationObserver.observe(node, { attributes: true });
+	return mutationObserver;
+}
+
 export function init() {
+	onClassChange(document.documentElement, (observer) => {
+		if(document.documentElement.classList.contains('dark')) {
+			color = darkColor
+		}
+		else {
+			color = lightColor
+		}
+	});
+	
 	var i, j, k;
 	canvas = document.getElementById('stars');
 	context = canvas.getContext('2d');
@@ -69,19 +99,6 @@ export function init() {
 					window.setTimeout(callback, 1000 / 60);
 				};
 	})();
-
-	// Fade in background
-	/*
-	var background = document.getElementById('background'),
-		bgImg = new Image(),
-		bgURL = '/img/background.jpg';
-	bgImg.onload = function() {
-		//console.log('background loaded');
-		background.style.backgroundImage = 'url("'+bgURL+'")';
-		background.className += ' loaded';
-	}
-	bgImg.src = bgURL;
-	*/
 
 	// Size canvas
 	resize();
@@ -249,15 +266,6 @@ function render() {
 			flares[j].render();
 		}
 	}
-
-	/*
-	if (orbitTilt) {
-		var tiltX = -(((canvas.clientWidth / 2) - mouse.x + ((nPos.x - 0.5) * noiseStrength)) * tilt),
-			tiltY = (((canvas.clientHeight / 2) - mouse.y + ((nPos.y - 0.5) * noiseStrength)) * tilt);
-
-		orbits.style.transform = 'rotateY('+tiltX+'deg) rotateX('+tiltY+'deg)';
-	}
-	*/
 }
 
 function resize() {
@@ -275,11 +283,11 @@ var Particle = function() {
 	this.x = random(-0.1, 1.1, true);
 	this.y = random(-0.1, 1.1, true);
 	this.z = random(0,4);
-	this.color = color;
 	this.opacity = random(0.1,1,true);
 	this.flicker = 0;
 	this.neighbors = []; // placeholder for neighbors
 };
+
 Particle.prototype.render = function() {
 	var pos = position(this.x, this.y, this.z),
 		r = ((this.z * particleSizeMultiplier) + particleSizeBase) * (sizeRatio() / 1000),
@@ -295,7 +303,7 @@ Particle.prototype.render = function() {
 		if (o < 0) o = 0;
 	}
 
-	context.fillStyle = this.color;
+	context.fillStyle = color;
 	context.globalAlpha = o;
 	context.beginPath();
 	context.arc(pos.x, pos.y, r, 0, 2 * Math.PI, false);
@@ -322,29 +330,16 @@ var Flare = function() {
 	this.x = random(-0.25, 1.25, true);
 	this.y = random(-0.25, 1.25, true);
 	this.z = random(0,2);
-	this.color = color;
 	this.opacity = random(0.001, 0.01, true);
 };
 Flare.prototype.render = function() {
 	var pos = position(this.x, this.y, this.z),
 		r = ((this.z * flareSizeMultiplier) + flareSizeBase) * (sizeRatio() / 1000);
 
-	// Feathered circles
-	/*
-	var grad = context.createRadialGradient(x+r,y+r,0,x+r,y+r,r);
-	grad.addColorStop(0, 'rgba(255,255,255,'+f.o+')');
-	grad.addColorStop(0.8, 'rgba(255,255,255,'+f.o+')');
-	grad.addColorStop(1, 'rgba(255,255,255,0)');
-	context.fillStyle = grad;
-	context.beginPath();
-	context.fillRect(x, y, r*2, r*2);
-	context.closePath();
-	*/
-
 	context.beginPath();
 	context.globalAlpha = this.opacity;
 	context.arc(pos.x, pos.y, r, 0, 2 * Math.PI, false);
-	context.fillStyle = this.color;
+	context.fillStyle = color;
 	context.fill();
 	context.closePath();
 	context.globalAlpha = 1;
@@ -532,8 +527,6 @@ function noisePoint(i) {
 	var a = nAngle * i,
 		cosA = Math.cos(a),
 		sinA = Math.sin(a),
-		//value = simplex.noise2D(nScale * cosA + nScale, nScale * sinA + nScale),
-		//rad = nRad + value;
 		rad = nRad;
 	return {
 		x: rad * cosA,

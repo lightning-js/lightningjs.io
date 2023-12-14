@@ -1,9 +1,12 @@
 #hero {
 	padding:0;
 	margin: 0;
-	height: 90vh;
- 	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(15, 23, 42,1) 100%);
-	
+	height: 70vh;
+	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(241, 245, 249, 1) 100%);
+}
+
+#hero .dark {
+	background: radial-gradient(ellipse at center, rgba(15 2,3, 42,1) 0%, rgba(15, 23, 42,1) 100%);
 }
 
 #stars {
@@ -15,7 +18,6 @@
 	-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);
 	mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) 30%);
 }
-
 
 @media (min-width: 640px) { 
 
@@ -30,17 +32,7 @@
  }
 
 @media (min-width: 1024px) { 
-	#hero{
-		height: 85vh;
-	}
 	#stars {
-	height: 80vh;
-} }
-
-@media (min-width: 1289px) { 
-	#hero{
-		height: 85vh;
-	}
-	#stars {
-	height: 80vh;
-} }
+		height: 80vh;
+	} 
+}

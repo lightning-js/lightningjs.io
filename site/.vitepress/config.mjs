@@ -1,10 +1,13 @@
 import { defineConfig } from 'vitepress'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/lightningjs.io/",
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
+  head: [
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "./assets/favicons/logo.svg"}]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -13,7 +16,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/lng.svg',
+    logo: '/assets/favicons/lng.svg',
     // search: {
     //   provider: 'local'
     // },
@@ -22,8 +25,8 @@ export default defineConfig({
         {
           text: 'Examples',
           items: [
-            { text: 'Markdown Examples', link: '/examples/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/examples/api-examples' }
+            { text: 'Markdown Examples', link: './examples/markdown-examples' },
+            { text: 'Runtime API Examples', link: './examples/api-examples' }
           ]
         }
       ]
@@ -33,5 +36,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/lightning-js' },
       { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
     ]
+  },
+  vite: {
+    base: "/lightningjs.io/"
   }
 })
