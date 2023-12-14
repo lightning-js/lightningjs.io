@@ -35,6 +35,4 @@ import '../../css/headerbackground.css';
           </div>
         </div>
       </div>
-
-    </div>
 </template>
