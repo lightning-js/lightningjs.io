@@ -16,7 +16,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: './assets/favicons/lng.svg',
+    logo: '/assets/favicons/lng.svg',
     // search: {
     //   provider: 'local'
     // },
