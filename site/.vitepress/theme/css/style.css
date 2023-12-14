@@ -129,6 +129,14 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+:root {
+  --vp-c-bg: hsl(210, 40%, 96%)
+}
+
+:root.dark {
+  --vp-c-bg: hsl(229, 84%, 5%)
+}
+
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
@@ -145,3 +153,4 @@
 .VPImage .logo {
   margin-left: 8px;
 }
+

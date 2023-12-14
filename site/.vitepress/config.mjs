@@ -30,7 +30,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lightning-js' }
+      { icon: 'github', link: 'https://github.com/lightning-js' },
+      { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
     ]
   }
 })

@@ -10,6 +10,7 @@ import '../../css/headerbackground.css';
 
 </script>
 <template>
+    <div class="relative">
     <div class="absolute inset-0  bg-black dark:bg-[#020617]" id="hero">
         <canvas id="stars" width="300" height="300"></canvas>
     </div>
@@ -29,4 +30,6 @@ import '../../css/headerbackground.css';
           </div>
         </div>
       </div>
+
+    </div>
 </template>
