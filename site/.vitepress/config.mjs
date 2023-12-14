@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
+  head: [
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "./assets/favicons/logo.svg"}]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -13,7 +16,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: './lng.svg',
+    logo: './assets/favicons/lng.svg',
     // search: {
     //   provider: 'local'
     // },
