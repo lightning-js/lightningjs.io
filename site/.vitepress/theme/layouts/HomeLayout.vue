@@ -13,12 +13,15 @@ const blitsInfo = {
 const solidInfo = {
   title: 'Solid'
 }
+
+import { useData } from 'vitepress';
+const {frontmatter} = useData();
 </script>
 <template>
     <main class="mx-auto max-w-screen-lg bg-slate-100 dark:bg-[#020617]">
         <HeroDisplay/>
         <Quote/>
-        <NewFeature/>
+        <NewFeature :features="frontmatter.features"/>
         <JoinDiscord/>
         <BlitsPlus :data="blitsInfo"/>
         <BlitsPlus :data="solidInfo"/>
