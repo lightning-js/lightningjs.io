@@ -1,6 +1,7 @@
 ---
 
 # https://vitepress.dev/reference/default-theme-home-page
+
 layout: home2
 
 features:
@@ -22,17 +23,28 @@ features:
 
 frameworks:
   - name: Blits
-    description: Our in-house built App Development Framework.
+    logo: /assets/home/blits-logo.png
+    darkLogo: /assets/home/blits-logo-white.png
+    code: /assets/home/blits.js
+    codeType: js
+    description: |
+      Our in-house built, fully featured, App Development Framework. Blits is easy and intuitive to work with. 
+      It goes hand in hand with the Lightning renderer, is lightweight and is built with performance first in mind.
     points:
-      - Specifically built for Lightning Renderer
-      - XML-style templating
-      - Built-in reactivity
-      - pre-compiled execution code
-      - lifecycle hooks
+      - Easy to read XML-style templating
+      - Built-in Reactivity
+      - Reusable Components
+      - App Routing
+    align: left
+
   - name: Solidjs
-    description: Lightning Renderer implemented as custom renderer with SolidJS
+    description: Lightning Renderer implemented as Universal Renderer with SolidJS
+    logo: /assets/home/logo_solidjs.png
+    darkLogo: /assets/home/logo_solidjs.png
+    code: /assets/home/solid.jsx
+    codeType: jsx
     points:
       - JSX
       - Solidjs Reactivity and Functionalities
+    align: right
 ---
-

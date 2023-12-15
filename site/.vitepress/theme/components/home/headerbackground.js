@@ -77,18 +77,22 @@ function onClassChange(node, callback) {
 	return mutationObserver;
 }
 
-export function init() {
+function setColorTheme() {
+	if(document.documentElement.classList.contains('dark')) {
+		color = darkColor
+	}
+	else {
+		color = lightColor
+	}
+}
+
+export function init(target) {
+	setColorTheme();
 	onClassChange(document.documentElement, (observer) => {
-		if(document.documentElement.classList.contains('dark')) {
-			color = darkColor
-		}
-		else {
-			color = lightColor
-		}
+		setColorTheme();
 	});
-	
 	var i, j, k;
-	canvas = document.getElementById('stars');
+	canvas = target.childNodes[0];
 	context = canvas.getContext('2d');
 	// requestAnimFrame polyfill
 	window.requestAnimFrame = (function(){
