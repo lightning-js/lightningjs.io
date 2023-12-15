@@ -1,18 +1,4 @@
-<script>
-import * as HeaderBackground from './headerbackground.js';
-import '../../css/headerbackground.css';
-
-    export default{
-        mounted() {
-            HeaderBackground.init();
-        }
-    }
-
-</script>
 <template>
-    <div class="absolute inset-0  bg-slate-100 dark:bg-[#020617]" id="hero">
-        <canvas id="stars" width="300" height="300"></canvas>
-    </div>
     <div class="z-10 relative px-6 lg:px-8">
         <div class="mx-auto max-w-2xl pt-20 sm:pt-28">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
