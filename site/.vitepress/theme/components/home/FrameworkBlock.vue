@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-     <section class="pt-32 relative isolate overflow-hidden px-6 lg:px-8 ">
+     <section class="pt-28 relative isolate overflow-hidden px-6 lg:px-8">
         <div v-if="framework" class="grid gap-3 md:grid-cols-2 ">
             <div class="p-6 flex justify-center items-baseline flex-col" :class="framework.align === 'left' ? 'order-first' : 'order-last' ">
                 <img class="stretch-0 max-auto h-16 hidden dark:block" :src="framework.darkLogo" alt="discord logo svg" />
@@ -33,16 +33,8 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div v-html="codeblob" class="overflow-none">
+            <div v-html="codeblob">
             </div>
         </div>
     </section>
 </template>
-
-<style scoped>
-
-pre.shiki {
-    overflow: hidden;
-}
-
-</style>

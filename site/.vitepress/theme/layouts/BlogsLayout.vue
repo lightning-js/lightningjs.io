@@ -22,7 +22,20 @@ import {data as blogs} from '../index.data.js';
 
 </script>
 <template>
-    <div class="mx-auto max-w-screen-lg sm:grid sm:grid-cols-2 lg:grid-cols-3">
-        <BlogCard v-for="blog in blogs" :blog="blog" />
+    <div class="mx-auto max-w-screen-lg flex flex-col items-center">
+        <div class="text-center max-w-2xl pt-20 sm:pt-28">
+            <h1 class="dark:hidden text-4xl font-bold tracking-tight sm:text-7xl animate-fade-up">
+                Read
+                <span class="from-blue-400 via-purple-700 to-blue-800 bg-gradient-to-r bg-clip-text text-transparent">Blogs</span>,
+                <br>
+                And
+                <span class="from-blue-400 via-purple-700 to-blue-800 bg-gradient-to-r bg-clip-text text-transparent">Articles</span>
+            </h1>
+            <h1 class="hidden dark:block text-4xl font-bold tracking-tight sm:text-7xl from-blue-200 via-purple-700 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent animate-fade-up">Read Blogs, <br> And Articles</h1>
+            <p class="mt-6 text-lg leading-8 text-black dark:text-gray-200"></p>
+        </div>
+        <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3">
+            <BlogCard v-for="blog in blogs" :blog="blog" />
+        </div>
     </div>
 </template>
