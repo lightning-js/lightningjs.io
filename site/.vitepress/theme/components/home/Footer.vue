@@ -23,13 +23,13 @@ import discord_dark from '../../../../assets/home/discord-mark-dark.png'
 <template>
     <section class="pb-8 text-left border-t-2" >
         <div class="mx-auto max-w-screen-lg flex flex-col items-center">
-            <div class="px-5 grid grid-cols-3 pt-4">
+            <div class="px-5 grid grid-cols-3 pt-4 w-full">
                 <div class="grid grid-cols-2 col-span-2 gap-3 ">
                     <DataFooter v-for="data in dataFooters" :footer="data" />
                 </div>
-                <div class="px-5 flex gap-3 items-center">
+                <div class="flex gap-3 items-center w-full">
                     <div class="py-6">
-                    <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lightning 2.0 <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lightning 2.0 <span aria-hidden="true">&rarr;</span></a>
                     </div>
                     <DataFooter v-for="data in dataLinks" :footer="data" target="_blank"/>
                 </div>
