@@ -1,6 +1,5 @@
 <script>
 import * as shiki from 'shiki-es'
-import {withBase} from 'vitepress';
 export default {
     props: ['framework'],
     data() {
@@ -10,13 +9,11 @@ export default {
     },
     mounted() {
         shiki.getHighlighter({
-            theme: 'one-dark-pro',
-            langs: [this.framework.codeType]
+            themes: ['min-dark', 'min-light'],
+            langs: [this.framework.codeType],
         })
         .then((highlighter) => {
-            import(`${withBase(this.framework.code)}?raw`).then((response) => {
-                this.codeblob = highlighter.codeToHtml(response.default, {lang: this.framework.codeType})
-            })
+            this.codeblob = highlighter.codeToHtml(this.framework.code, {lang: this.framework.codeType})
         })
     }
 }
@@ -24,7 +21,7 @@ export default {
 
 <template>
      <section class="pt-32 relative isolate overflow-hidden px-6 lg:px-8 ">
-        <div class="grid gap-3 md:grid-cols-2 ">
+        <div v-if="framework" class="grid gap-3 md:grid-cols-2 ">
             <div class="p-6 flex justify-center items-baseline flex-col" :class="framework.align === 'left' ? 'order-first' : 'order-last' ">
                 <img class="stretch-0 max-auto h-16 hidden dark:block" :src="framework.darkLogo" alt="discord logo svg" />
                 <img class="stretch-0 max-auto h-16 dark:hidden" :src="framework.logo" alt="discord logo svg" />   
@@ -36,8 +33,16 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div v-html="codeblob">
+            <div v-html="codeblob" class="overflow-none">
             </div>
         </div>
     </section>
 </template>
+
+<style scoped>
+
+pre.shiki {
+    overflow: hidden;
+}
+
+</style>
