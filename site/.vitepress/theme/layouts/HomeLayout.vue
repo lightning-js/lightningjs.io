@@ -93,7 +93,7 @@ const home = {
         <JoinDiscord/>
         <!-- <FancyBackground class="rotate-180"/> -->
         <FrameworkBlock :framework="home.blits"/>
-        <FrameworkBlock :framework="home.solid"/>
+        <FrameworkBlock class="pb-16" :framework="home.solid"/>
     </main>
     <Footer/>
 </template>
