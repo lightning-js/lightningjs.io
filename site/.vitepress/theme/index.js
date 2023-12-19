@@ -24,9 +24,7 @@ import BlogLayout from './layouts/BlogLayout.vue';
 import BlogsLayout from './layouts/BlogsLayout.vue';
 import HomeLayout from './layouts/HomeLayout.vue';
 
-import FrameworkBlock from './components/home/FrameworkBlock.vue';
 import FancyBackground from './components/home/FancyBackground.vue';
-import HeroDisplay from './components/home/HeroDisplay.vue';
 
 export default {
   extends: Theme,
@@ -46,7 +44,5 @@ export default {
     app.component('home2', HomeLayout)
 
     app.component('FancyBackground', FancyBackground)
-    app.component('HeroDisplay', HeroDisplay)
-    app.component('FrameworkBlock', FrameworkBlock)
   }
 }
