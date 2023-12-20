@@ -11,8 +11,8 @@ export default {
     },
     mounted() {
         shiki.getHighlighter({
-            themes: ['min-dark', 'min-light'],
-            langs: [this.flavor.codeType],
+            themes: ['one-dark-pro'],
+            langs: [this.flavor.codeType]
         })
             .then((highlighter) => {
             this.codeblob = highlighter.codeToHtml(this.flavor.code, { lang: this.flavor.codeType });
@@ -36,7 +36,28 @@ export default {
             </ul>
             <LinkButton class="pt-8" :href="flavor.url" label="Learn more"></LinkButton>
         </div>
-        <div class="w-11/12" v-html="codeblob">
+        <div v-if="flavor && flavor.name !== 'blits'" class="w-11/12" v-html="codeblob">
+            
+        </div>
+        <div v-if="flavor && flavor.name === 'blits'" class="w-11/12">
+            <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0"><code><span class="line"><span style="color: #E5C07B">Blits</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">Application</span><span style="color: #ABB2BF">({</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E06C75">template</span><span style="color: #ABB2BF">: `</span></span>
+<span class="line"><span style="color: #ABB2BF">        &lt;<span style="color: #E06C75">Element</span> <span style="color: #D19A66">w</span>=<span style="color: #98C379">"1920"</span> <span style="color: #D19A66">h</span>=<span style="color: #98C379">"1080"</span> <span style="color: #D19A66">color</span>=<span style="color: #98C379">"#000"</span>&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">            &lt;<span style="color: #E06C75">Text</span> <span style="color: #D19A66">:content</span>=<span style="color: #98C379">"$title"</span>/&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">        &lt;/<span style="color: #E06C75">Element</span>&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    `</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #61AFEF">state</span><span style="color: #ABB2BF">() {</span></span>
+<span class="line"><span style="color: #ABB2BF">        </span><span style="color: #C678DD">return</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">            </span><span style="color: #E06C75">title</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">'Blits!'</span></span>
+<span class="line"><span style="color: #ABB2BF">        }</span></span>
+<span class="line"><span style="color: #ABB2BF">    },</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E06C75">input</span><span style="color: #ABB2BF">: {</span></span>
+<span class="line"><span style="color: #ABB2BF">        </span><span style="color: #61AFEF">enter</span><span style="color: #ABB2BF">() {</span></span>
+<span class="line"><span style="color: #ABB2BF">            </span><span style="color: #E5C07B">this</span><span style="color: #ABB2BF">.</span><span style="color: #E06C75">title</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #98C379">'Blits! is! awesome!'</span></span>
+<span class="line"><span style="color: #ABB2BF">        }</span></span>
+<span class="line"><span style="color: #ABB2BF">    }</span></span>
+<span class="line"><span style="color: #ABB2BF">})</span></span>
+<span class="line"></span><span class="line"></span></code></pre>
         </div>
     </div>
 </template>
