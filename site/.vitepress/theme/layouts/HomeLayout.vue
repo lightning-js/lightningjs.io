@@ -61,7 +61,7 @@ const home = {
     description: 'The Renderer is not designed for direct application development but instead to provide a lightweight API for front-end applications we have some flavors available.',
     flavors: [
       {
-        name: 'Blits',
+        name: 'blits',
         url: 'https://lightning-js.github.io/blits/#/',
         logo: img_blits,
         darkLogo: img_blits_dark,
@@ -79,7 +79,7 @@ const home = {
         align: 'left'
       },
       {
-        name: 'Solidjs',
+        name: 'solidjs',
         url: 'https://github.com/lightning-js/solid',
         description: 'Lightning Renderer implemented as Universal Renderer with SolidJS',
         logo: img_solid,
