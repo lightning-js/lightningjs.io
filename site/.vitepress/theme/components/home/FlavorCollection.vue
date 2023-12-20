@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <section class="pt-14 md:pt-28 lg:px-8">
+    <section class="pt-14 md:pt-28">
         <SectionHeader :title="title" :description="description"/>
         <FlavorBlock v-for="flavor in flavors" :flavor="flavor"/>
     </section>

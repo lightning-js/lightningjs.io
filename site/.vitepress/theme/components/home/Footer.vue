@@ -23,8 +23,8 @@ import discord_dark from '../../../../assets/home/discord-mark-dark.png'
 <template>
     <section class="pb-8 text-left border-t-2" >
         <div class="mx-auto max-w-screen-lg flex flex-col items-center">
-            <div class="px-5 grid grid-cols-3 pt-4 w-full">
-                <div class="grid grid-cols-2 col-span-2 gap-3 ">
+            <div class="px-5 grid grid-cols-1 md:grid-cols-3 pt-4 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-3 ">
                     <DataFooter v-for="data in dataFooters" :footer="data" />
                 </div>
                 <div class="flex gap-3 items-center w-full">
