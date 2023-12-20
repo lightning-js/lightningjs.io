@@ -1,3 +1,7 @@
+<script setup>
+import LinkButton from './LinkButton.vue';
+</script>
+
 <template>
     <div class="z-10 relative px-6 lg:px-8">
         <div class="mx-auto max-w-2xl pt-20 sm:pt-28">
@@ -15,9 +19,7 @@
             </h1>
             <h1 class="hidden dark:block text-4xl font-bold tracking-tight sm:text-7xl from-blue-200 via-purple-700 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent animate-fade-up">More Performance, Less Code</h1>
             <p class="mt-6 text-lg leading-8 text-black dark:text-gray-200">Lightweight, open-source framework for developing hyper fast animated applications</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="https://lightning-js.github.io/blits/#/" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Beta <span aria-hidden="true">→</span></a>
-            </div>
+            <LinkButton class="mt-10" href="https://lightning-js.github.io/blits/#/" label="Beta"/>
           </div>
         </div>
       </div>

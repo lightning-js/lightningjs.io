@@ -23,6 +23,7 @@
     }
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.16",
     "delaunay-fast": "^1.0.1",
     "shiki": "^0.14.6",
     "shiki-es": "^0.14.0"
