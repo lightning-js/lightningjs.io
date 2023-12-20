@@ -7,8 +7,8 @@ import LinkButton from './LinkButton.vue';
 <template>
     <section class="relative isolate overflow-hidden px-6 mb-8 pt-14 sm:pt-28 lg:px-8">
         <div class="mb-8 flex justify-center">
-            <img class="max-auto h-14 hidden dark:block" :src="discord_white" alt="discord logo svg" />
-            <img class="max-auto h-14  dark:hidden" :src="discord_dark" alt="discord logo svg" />   
+            <img class="max-auto h-8 hidden dark:block" :src="discord_white" alt="discord logo svg" />
+            <img class="max-auto h-8  dark:hidden" :src="discord_dark" alt="discord logo svg" />   
         </div>  
         <figure class="mt-10">
                 <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl text-center">Join us on Discord!</h1>
