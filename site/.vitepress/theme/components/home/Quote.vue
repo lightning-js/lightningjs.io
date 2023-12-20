@@ -4,7 +4,7 @@ import lightning_logo_dark from '../../../../assets/home/lightning_logo_dark_two
 import lightning_logo_svg from '../../../lng.svg'
 </script>
 <template >
-    <div class="mx-auto max-w-2xl pt-32">
+    <div class="mx-auto max-w-2xl pt-14 md:pt-32">
         <section class="relative isolate overflow-hidden px-6 lg:px-8 ">
          <div class="mb-8 flex items-center justify-center gap-3">
             <span class="font-bold text-4xl">Lightningjs</span>

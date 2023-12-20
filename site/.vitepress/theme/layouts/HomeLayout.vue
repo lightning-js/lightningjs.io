@@ -62,6 +62,7 @@ const home = {
     flavors: [
       {
         name: 'Blits',
+        url: 'https://lightning-js.github.io/blits/#/',
         logo: img_blits,
         darkLogo: img_blits_dark,
         code: blits_code,
@@ -79,6 +80,7 @@ const home = {
       },
       {
         name: 'Solidjs',
+        url: 'https://github.com/lightning-js/solid',
         description: 'Lightning Renderer implemented as Universal Renderer with SolidJS',
         logo: img_solid,
         darkLogo: img_solid_dark,
