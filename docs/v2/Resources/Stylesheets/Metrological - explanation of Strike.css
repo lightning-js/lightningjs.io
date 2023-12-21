@@ -1,0 +1,225 @@
+/*<meta />*/
+
+/*<meta sourceDocument="C:\_TDS\projecten 2020\201001_01 FZ Metrological Pilot\Input\Strike\Metrological - explanation of Strike.docx" />*/
+
+p
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ol
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ul
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+li
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+td
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	vertical-align: top;
+}
+
+p.Titel
+{
+	page-break-after: avoid;
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	font-weight: bold;
+	color: #000000;
+	font-size: 30pt;
+}
+
+p.Body
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	color: #000000;
+	font-size: 11pt;
+}
+
+li.Body
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	color: #000000;
+	font-size: 11pt;
+}
+
+span.Hyperlink0
+{
+	text-decoration: underline;
+}
+
+p.Body_1
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	color: #000000;
+	font-size: 11pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+p.Body_2
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	color: #000000;
+	font-size: 11pt;
+	text-decoration: underline;
+}
+
+ul.ul_1
+{
+	padding-left: 0px;
+	list-style-type: square;
+	margin-left: 9pt;
+}
+
+p.Body_3
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	font-size: 11pt;
+	font-style: italic;
+	color: #B51700;
+}
+
+p.Body_4
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	font-size: 11pt;
+	color: #FF2600;
+}
+
+li.Body_1
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	color: #000000;
+	font-size: 11pt;
+	text-decoration: underline;
+}
+
+ul.ul_2
+{
+	padding-left: 0px;
+	list-style-type: square;
+	margin-left: 12pt;
+}
+
+span.span_1
+{
+	font-style: italic;
+	color: #B51700;
+}
+
+span.span_2
+{
+	font-style: italic;
+	color: #EE220C;
+}
+
+span.span_3
+{
+	font-style: italic;
+	color: #004D80;
+}
+
+p.Body_5
+{
+	border-top-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	font-family: 'Helvetica Neue';
+	font-size: 11pt;
+	font-style: italic;
+	color: #004D80;
+}
+
+span.span_4
+{
+	color: #FF2600;
+}
+
+ul.ul_3
+{
+	padding-left: 0px;
+	list-style-type: square;
+	margin-left: 18pt;
+}
+
+span.span_5
+{
+	color: #FF2600;
+	text-decoration: underline;
+}
+

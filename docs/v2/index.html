@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LightningJS.io - Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64JTYR9LMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-64JTYR9LMD');
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Lightning Documentation',
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      // subMaxLevel: 3,
+      relativePath: true,
+      auto2top: true,
+      search: {
+        maxAge: 24*60*60*1000, // one day
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        depth: 6,
+      },
+      noCompileLinks: [
+        '/api/.*'
+      ],
+      plugins: [
+        function(hook, vm) {
+          hook.ready(function() {
+            if(vm.route && vm.route.path === '/') {
+              window.location.hash = 'what-is-lightning/index'
+            }
+          })
+        }
+      ]
+    }
+
+
+  </script>
+
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+
+<!-- plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+</body>
+</html>
