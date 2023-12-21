@@ -9,3 +9,6 @@ releases
 .env
 site/.vitepress/cache
 site/.vitepress/cache/
+site/.vitepress/dist
+site/.vitepress/dist/
+public
