@@ -1,14 +1,13 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/lightningjs.io/",
+  base: "./",
   title: "Lightningjs Site",
   description: "Lightningjs Nexus of Information",
-  outDir: "../public",
   head: [
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css' }],
-    ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "./assets/favicons/lng_16x16.png"}],
-    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "./assets/favicons/lng_32x32.png"}]
+    ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "/assets/favicons/lng_16x16.png"}],
+    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/assets/favicons/lng_32x32.png"}]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -18,7 +17,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: './assets/favicons/lng.svg',
+    logo: '/assets/favicons/lng.svg',
     // search: {
     //   provider: 'local'
     // },
@@ -40,6 +39,6 @@ export default defineConfig({
     ]
   },
   vite: {
-    base: "/lightningjs.io/"
+    base: "./"
   }
 })
