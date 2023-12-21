@@ -16,6 +16,7 @@ export default defineConfig({
       { text: 'News', link: '/blogs'}
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
+    outDir: '../public',
     siteTitle: 'Lightningjs',
     logo: '/assets/favicons/lng.svg',
     // search: {
