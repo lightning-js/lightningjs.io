@@ -5,7 +5,7 @@ import img_shader from '../../../assets/home/feature_shader.png'
 import img_batched from '../../../assets/home/feature_batched.png'
 
 //these need their own
-import img_fontrendering from '../../../assets/home/feature_multithreading.png'
+import img_fontrendering from '../../../assets/home/feature_font.png'
 
 //frameworks
 //blits data
