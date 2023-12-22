@@ -2,7 +2,6 @@ node_modules
 node_modules/
 .DS_store
 .idea
-docs
 build
 releases
 .tmp
