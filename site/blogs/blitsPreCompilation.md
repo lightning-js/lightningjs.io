@@ -37,4 +37,4 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 })
 ```
 
-Version 0.6.0 of Blits is now available on NPM. Enjoy the enhanced performance 🚀⚡️
+Version 0.6.0 of Blits is now available on [NPM](https://www.npmjs.com/package/@lightningjs/blits/v/0.6.0). Enjoy the enhanced performance 🚀⚡️
