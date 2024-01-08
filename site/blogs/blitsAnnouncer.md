@@ -6,8 +6,15 @@ date: 2024-1-8
 ---
 
 A new important piece of functionality has been added to Blits: **Text-to-Speech** (also known as **Announcer** capability).
+The Announcer implementation in Blits, is one first step in making it a lot easier for developers to build Accessible Apps.
 
-The Announcer implementation in Blits, will help developers make their Apps more _accessible_ - something that’s often overlooked when during development. But having speech assistance integrated into your App is a huge deal for those users that are visually impaired.
+But what is _Accessibility_ exactly? Accessibility refers to designing products and systems that are usable for people with diverse abilities. Think of people with visual impairments, hearing impairments, physical disabilities, cognitive disabilities etc.
+
+In the context of TV applications, accessibility means making sure that all users can access and enjoy the content regardless of their specific needs or limitations.
+
+Making Apps accessible is something that is often overlooked during development. Have you ever imaged how a visually impaired user would navigate through your App and enjoy it's content?
+
+One way of making your App more accessible for this group of users, is by integrating _Speech assistance_. With Text-to-Speech functionality, people with difficulty reading or navigating through a TV application using traditional means, are provided with auditory cues, to guide and help them to understand the context.
 
 ### Integrated with the router
 
@@ -57,7 +64,7 @@ Of course the release of Blits v0.6.1 comes together with an Text-to-Speech demo
 
 Now, we could have gone with a boring example, but what’s the fun in that?! Instead we went all in and created an **"Accessible Memory Game"** 😀
 
-The game guides the users with Text-to-Speech messages as they navigate through the memory cards. When a card is flipped, it announces the image displayed on it. And afterwards it tells you wether or not you have gotten a pair. 
+The game guides the users with Text-to-Speech messages as they navigate through the memory cards. When a card is flipped, it announces the image displayed on it. And afterwards it tells you whether or not you have gotten a pair. 
 
 
 <video width="100%" style="margin: 48px 0px" controls>
