@@ -2,7 +2,7 @@
 layout: blog
 title: Text-to-Speech now available in Blits
 description: Blits v0.6.1 comes with built-in Text-to-Speech (aka Announcing) capabilities to make your Apps more accessible
-date: 2024-1-4
+date: 2024-1-8
 ---
 
 A new important piece of functionality has been added to Blits: **Text-to-Speech** (also known as **Announcer** capability).
