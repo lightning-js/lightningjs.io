@@ -16,6 +16,9 @@
  */
 
 import { defineConfig } from 'vitepress'
+import templateSidebar from '../docs/template/sidebar.json'
+import blitsSidebar from '../docs/blits/sidebar.json'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/",
@@ -40,15 +43,8 @@ export default defineConfig({
     //   provider: 'local'
     // },
     sidebar: {
-      '/examples/': [
-        {
-          text: 'Examples',
-          items: [
-            { text: 'Markdown Examples', link: './examples/markdown-examples' },
-            { text: 'Runtime API Examples', link: './examples/api-examples' }
-          ]
-        }
-      ]
+      '/docs/template/': templateSidebar,
+      '/docs/blits/': blitsSidebar
     },
 
     socialLinks: [
