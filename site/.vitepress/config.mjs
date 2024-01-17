@@ -16,8 +16,7 @@
  */
 
 import { defineConfig } from 'vitepress'
-import templateSidebar from '../docs/template/sidebar.json'
-import blitsSidebar from '../docs/blits/sidebar.json'
+import blitsSidebar from '../v3-docs/blits/sidebar.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -43,8 +42,7 @@ export default defineConfig({
     //   provider: 'local'
     // },
     sidebar: {
-      '/docs/template/': templateSidebar,
-      '/docs/blits/': blitsSidebar
+      ...blitsSidebar
     },
 
     socialLinks: [

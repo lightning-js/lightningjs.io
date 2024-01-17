@@ -37,7 +37,7 @@ function exec(command) {
 
 const config = {
     tempDir: path.join(process.cwd(), '.temp-repos'),
-    targetBasePath: path.join(process.cwd(), 'site', 'docs'),
+    targetBasePath: path.join(process.cwd(), 'site', 'v3-docs'),
     repos: [
         {
             gitURL: 'https://github.com/lightning-js/blits',
@@ -47,6 +47,18 @@ const config = {
             ignoreFiles: ['README.md', '_sidebar.md', '.nojekyll', 'index.html'],
         },
     ]
+}
+
+function prefixLinks(prefix, array) {
+    array.forEach((item) => {
+        if(item.items) {
+            item.items = prefixLinks(prefix, item.items);
+        }
+        if(item.link) {
+            item.link = prefix + item.link;
+        }
+    })
+    return array;
 }
 
 async function getRemoteDocs(repo) {
@@ -66,8 +78,19 @@ async function getRemoteDocs(repo) {
             .cwd(clonedRepoPath)
             .checkout(repo.gitBranch);
 
+        const prefix = `/${path.join('v3-docs', repo.targetDir)}`;
+
+        let sidebar = fs.readFileSync(path.join(sourcePath, 'sidebar.json'));
+        sidebar = prefixLinks(prefix, JSON.parse(sidebar));
+        sidebar = JSON.stringify({
+            [`${prefix}`]: sidebar
+        })
+
+        await fs.writeFile(path.join(sourcePath, 'sidebar.json'), sidebar);
+
         console.info('Move docs to allocated folder, and remove unneeded file / directories')
         await fs.move(sourcePath, targetPath);
+
         await Promise.all(repo.ignoreFiles.map(file => fs.remove(path.join(targetPath, file))));
         await fs.remove(clonedRepoPath);
 
