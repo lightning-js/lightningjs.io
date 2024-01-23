@@ -29,7 +29,10 @@ const shell = require('shelljs');
  */
 function exec(command) {
   return new Promise((resolve, reject) => {
-    shell.exec(command, { async: true, silent: true }, (code) => {
+    shell.exec(command, { async: true, silent: true }, (code, stdout, stderr) => {
+      if (code !== 0) {
+        console.error(stderr);
+      }
       resolve(code);
     });
   })
@@ -104,7 +107,7 @@ async function getRemoteDocs(repo) {
       const tdSourcePath = path.join(clonedRepoPath, repo.typedocSourceDir);
       const tdTargetPath = path.join(config.typedocTargetBasePath, repo.typedocTargetDir);
       shell.cd(clonedRepoPath);
-      const result = await exec('npm install && npm run typedoc');
+      const result = await exec('npm install && npm run build && npm run typedoc');
       if (result === 0) {
         await fs.move(tdSourcePath, tdTargetPath);
         console.info(`TypeDocs for ${repo.gitURL} built successfully.`);
