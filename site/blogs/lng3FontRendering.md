@@ -5,7 +5,7 @@ description: Lightning 3.0 Font Rendering engine is a new font rendering engine 
 date: 2023-9-17
 ---
 
-<img src="../assets/lng3FontRendering/MSDF-Grow-1.gif" class="rounded-lg w-full" />
+<img src="/public/lng3FontRendering/MSDF-Grow-1.gif" class="rounded-lg w-full" />
 
 Text rendering has been one of the more difficult areas in the Lightning 2.0 framework. Today, Lightning utilizes the browser’s Canvas 2D API to render text to a texture. It is then uploaded to the GPU where it is rendered to the screen just as if it were a PNG image. Unfortunately, the Canvas 2D text operations and texture uploading are single-threaded, CPU intensive, and consumes a large amount of memory on the GPU, which is scarce on embedded devices.
 
@@ -56,7 +56,7 @@ So how can we offload as much as possible to the GPU when rendering text? In cas
 
 To understand the fragment shader, think of a grid of pixels that need to be rendered by a GPU. For each pixel, an instance of the fragment shader program will run on its own GPU core completely independent from the others until all the pixels have been calculated.
 
-<img src="../assets/lng3FontRendering/fragment_shader.png" class="rounded-lg w-full bg-slate-100" />
+<img src="/public/lng3FontRendering/fragment_shader.png" class="rounded-lg w-full bg-slate-100" />
 
 Vertex shaders work on a similar principle but deal with the vertex positions that f orm the geometry of the scene. Think of polygons in a 3D model. These run before the fragment shader. They are important but not as interesting in 2D applications, so we won’t go into them here. If you’d like to learn more about how GPUs and shaders work check out this [presentation](https://www.cs.cmu.edu/afs/cs/academic/class/15462-f11/www/lec_slides/lec19.pdf).
 
@@ -69,7 +69,7 @@ In 2007 an engineer at Valve published a [paper](https://steamcdn-a.akamaihd.net
 At its core, SDFs are a way of encoding vector shapes, like font glyphs, into a fairly low resolution texture that can be transformed into sharp rasterized shapes at virtually any resolution completely by the GPU. Let’s take a look at a capital letter “A” and it’s single-channel signed distance field representation:
 
 <div>
-    <img src="../assets/lng3FontRendering/a_a.png" class="rounded-lg w-full bg-slate-100" />
+    <img src="/public/lng3FontRendering/a_a.png" class="rounded-lg w-full bg-slate-100" />
     <p class="text-center" >“A” and it’s 36x34 SDF (enlarged)</p>
 </div>
 
@@ -77,7 +77,7 @@ At its core, SDFs are a way of encoding vector shapes, like font glyphs, into a 
 You might first look at it and think it’s just a blurry beveled “A” but each pixel actually represents the shortest distance from the center of the pixel to an edge of the shape of “A” within a defined range. The monochrome (hence why it’s called “single-channel”) values 0 to 127 (black to darker gray) represent distances outside of the shape, and values from 128 to 255 (lighter gray to white) represent distances inside of the shape. Using simple math in a fragment shader with the native bilinear texture interpolation provided by the GPU that smoothly upscales the SDF texture we can render the shape at virtually any resolution and it will remain sharply defined! We can even add a little more math to the shader to get anti-aliasing (soft edges). The resolution of the texture just needs to be large enough to just clearly encode the details of the shape.
 
 <div>
-    <img src="../assets/lng3FontRendering/MSDF-Grow-1.gif" class="rounded-lg w-full" />
+    <img src="/public/lng3FontRendering/MSDF-Grow-1.gif" class="rounded-lg w-full" />
     <p class="text-center" >Single-Channel SDF Growing animation</p>
 </div>
 
@@ -85,14 +85,14 @@ You might first look at it and think it’s just a blurry beveled “A” but ea
 There is a particular downside to this approach that becomes more apparent the larger you scale the text. While the edges of the shape remain sharply defined at larger scales, you will notice certain details that have been blurred over by the SDF. All sharp corners are rounded out and certain details can be slightly warped. Let’s actually render that “A” using its SDF which only occupies 36x34 real pixels of the texture:
 
 <div>
-    <img src="../assets/lng3FontRendering/fragment_shader_a.png" class="rounded-lg w-full" />
+    <img src="/public/lng3FontRendering/fragment_shader_a.png" class="rounded-lg w-full" />
     <p class="text-center" >36x34 “A” SDF (enlarged) and what it renders into</p>
 </div>
 
 If you look closely, all the sharp corners from the source “A” are rounded, and particularly the peak of the inner whitespace.
 
 <div class="flex flex-col items-center">
-    <img src="../assets/lng3FontRendering/a_corners.png" class="rounded-lg bg-slate-100" />
+    <img src="/public/lng3FontRendering/a_corners.png" class="rounded-lg bg-slate-100" />
     <p class="text-center" >Blurred details of a single-channel SDF rendering</p>
 </div>
 
@@ -102,7 +102,7 @@ Depending on your precise design requirements and how large you are rendering te
 MSDFs improve render quality significantly by utilizing three channels (RGB), instead of one, to encode more information about a shape. There is a whole [master’s thesis](https://dspace.cvut.cz/bitstream/handle/10467/62770/F8-DP-2015-Chlumsky-Viktor-thesis.pdf) that goes into the details of how this method works. But here’s what an MSDF for the letter “A” looks like:
 
 <div>
-    <img src="../assets/lng3FontRendering/A_MSDF.png" class="rounded-lg w-full" />
+    <img src="/public/lng3FontRendering/A_MSDF.png" class="rounded-lg w-full" />
     <p class="text-center" >36x34 “A” MSDF (enlarged) and what it renders into</p>
 </div>
 
@@ -117,11 +117,11 @@ This [GitHub project](https://github.com/Chlumsky/msdfgen) is a great resource t
 In order to render text using one of these methods we need to, at build time, generate a texture map atlas of the SDFs for each glyph that we need in our application.
 
 <div class="flex flex-col items-center">
-    <img src="../assets/lng3FontRendering/atlas_sdf.png" class="rounded-lg bg-slate-100" />
+    <img src="/public/lng3FontRendering/atlas_sdf.png" class="rounded-lg bg-slate-100" />
 </div>
 
 <div class="flex flex-col items-center">
-    <img src="../assets/lng3FontRendering/atlas_msdf.png" class="rounded-lg bg-slate-100" />
+    <img src="/public/lng3FontRendering/atlas_msdf.png" class="rounded-lg bg-slate-100" />
 </div>
 
 Single-Channel and Multi-Channel SDF Atlases
