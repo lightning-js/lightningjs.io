@@ -22,6 +22,7 @@ export default defineConfig({
   title: "Lightningjs",
   description: "Lightningjs Nexus of Information",
   outDir: "../public",
+  publicDir: "assets",
   head: [
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css' }],
     ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "/favicons/lng_16x16.png"}],
