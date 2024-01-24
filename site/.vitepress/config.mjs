@@ -24,8 +24,8 @@ export default defineConfig({
   outDir: "../public",
   head: [
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css' }],
-    ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "https://staging.lightningjs.io/assets/favicons/lng_16x16.png"}],
-    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/assets/favicons/lng_32x32.png"}]
+    ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "/favicons/lng_16x16.png"}],
+    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/favicons/lng_32x32.png"}]
   ],
   transformPageData: (pageData) => {
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
@@ -48,7 +48,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/assets/favicons/lng.svg',
+    logo: '/favicons/lng.svg',
     // search: {
     //   provider: 'local'
     // },
