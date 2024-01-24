@@ -1,7 +1,5 @@
 <script setup>
-import lightning_logo_light from '../../../../assets/home/lightning_logo_light.png'
-import lightning_logo_dark from '../../../../assets/home/lightning_logo_dark_two.png'
-import lightning_logo_svg from '../../../lng.svg'
+import lightning_logo_svg from '../../../../static/favicons/lng.svg'
 </script>
 <template >
     <div class="mx-auto max-w-2xl pt-14 md:pt-32">
