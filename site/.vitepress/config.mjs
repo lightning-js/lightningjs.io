@@ -27,6 +27,7 @@ export default defineConfig({
     ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: "/assets/favicons/lng_16x16.png"}],
     ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/assets/favicons/lng_32x32.png"}]
   ],
+
   transformPageData: (pageData) => {
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
     const {title, description} = pageData.frontmatter;
@@ -35,7 +36,7 @@ export default defineConfig({
     pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pageData.frontmatter.layout === 'home2' ? 'Lightningjs' : `${title} | Lightningjs`}])
     pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pageData.frontmatter.layout === 'home2' ? 'Nexus of Information' : description}])
     pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: new URL('assets/favicons/lng_200x200.png', import.meta.url)}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: new URL('/assets/favicons/lng_200x200.png', import.meta.url)}])
 
   },
   themeConfig: {
@@ -68,6 +69,7 @@ export default defineConfig({
     ]
   },
   vite: {
-    base: "/"
+    base: "/",
+    publicDir: 'static'
   }
 })
