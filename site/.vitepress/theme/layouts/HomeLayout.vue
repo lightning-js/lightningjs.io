@@ -1,23 +1,23 @@
 <script setup>
 //feature imports
-import img_multithreading from '../../../public/home/feature_multithreading.png'
-import img_shader from '../../../public/home/feature_shader.png'
-import img_batched from '../../../public/home/feature_batched.png'
+import img_multithreading from '../../../assets/home/feature_multithreading.png'
+import img_shader from '../../../assets/home/feature_shader.png'
+import img_batched from '../../../assets/home/feature_batched.png'
 
 //these need their own
-import img_fontrendering from '../../../public/home/feature_font.png'
+import img_fontrendering from '../../../assets/home/feature_font.png'
 
 //frameworks
 //blits data
-import img_blits from '../../../public/home/blits-logo.png'
-import img_blits_dark from '../../../public/home/blits-logo-white.png'
-import blits_code from '../../../public/home/blits.js?raw'
+import img_blits from '../../../assets/home/blits-logo.png'
+import img_blits_dark from '../../../assets/home/blits-logo-white.png'
+import blits_code from '../../../assets/home/blits.js?raw'
 
 //need light mode image
 //solid data
-import img_solid from '../../../public/home/logo_solidjs_light.png'
-import img_solid_dark from '../../../public/home/logo_solidjs_dark.png'
-import solid_code from '../../../public/home/solid.jsx?raw'
+import img_solid from '../../../assets/home/logo_solidjs_light.png'
+import img_solid_dark from '../../../assets/home/logo_solidjs_dark.png'
+import solid_code from '../../../assets/home/solid.jsx?raw'
 
 import HeroDisplay from '../components/home/HeroDisplay.vue'
 import Quote from '../components/home/Quote.vue'

@@ -1,4 +1,6 @@
 <script setup>
+import lightning_logo_light from '../../../../assets/home/lightning_logo_light.png'
+import lightning_logo_dark from '../../../../assets/home/lightning_logo_dark_two.png'
 import lightning_logo_svg from '../../../lng.svg'
 </script>
 <template >

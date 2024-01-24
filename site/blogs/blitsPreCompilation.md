@@ -21,7 +21,7 @@ We’ve done some tests on the RPi3 and have seen that adding pre-compilation sh
 
 Pre-compilation mode is activated by default when you use v0.6.0 of Blits (or higher). A small modification to the Vite config of your App is required to enable it, though:
 
-<img src="/public/blogs/blits-precompilation-vite.png" class="rounded-lg py-5 w-full" style="max-width: 600px" />
+<img src="../assets/blogs/blits-precompilation-vite.png" class="rounded-lg py-5 w-full" style="max-width: 600px" />
 
 If you wish to disable pre-compilation, you can do so in your App's `vite.config.js`, by adding `precompile: false` in the `blits` key:
 

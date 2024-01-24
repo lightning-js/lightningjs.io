@@ -1,10 +1,10 @@
 
 <script setup>
 import DataFooter from './DataFooter.vue';
-import github_mark from '../../../../public/home/github-mark-white.svg';
-import github_dark from '../../../../public/home/github-mark-dark.svg';
-import discord_white from '../../../../public/home/discord-mark-white.png'
-import discord_dark from '../../../../public/home/discord-mark-dark.png'
+import github_mark from '../../../../assets/home/github-mark-white.svg';
+import github_dark from '../../../../assets/home/github-mark-dark.svg';
+import discord_white from '../../../../assets/home/discord-mark-white.png'
+import discord_dark from '../../../../assets/home/discord-mark-dark.png'
 
   const dataFooters = [
     { title: 'Lighting - Renderer', url: 'https://github.com/lightning-js/renderer'},
