@@ -68,7 +68,7 @@ The game guides the users with Text-to-Speech messages as they navigate through 
 
 
 <video width="100%" style="margin: 48px 0px" controls>
-  <source src="/assets/blogs/accessible-memory-game.mp4" type="video/mp4">
+  <source src="/public/blogs/accessible-memory-game.mp4" type="video/mp4">
 </video>
 
 

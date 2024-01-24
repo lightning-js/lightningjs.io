@@ -1,6 +1,6 @@
 <script setup>
-import discord_white from '../../../../assets/home/discord-mark-white.png';
-import discord_dark from '../../../../assets/home/discord-mark-dark.png';
+import discord_white from '../../../../public/home/discord-mark-white.png';
+import discord_dark from '../../../../public/home/discord-mark-dark.png';
 import LinkButton from './LinkButton.vue';
 
 </script>
