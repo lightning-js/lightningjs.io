@@ -32,11 +32,11 @@ export default defineConfig({
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
     const {title, description} = pageData.frontmatter;
     pageData.frontmatter.head ??= [];
-    pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:url', content: `${import.meta.url}/${conicalPath}`}])
     pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pageData.frontmatter.layout === 'home2' ? 'Lightningjs' : `${title} | Lightningjs`}])
     pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pageData.frontmatter.layout === 'home2' ? 'Nexus of Information' : description}])
     pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: new URL('/assets/favicons/lng_200x200.png', import.meta.url)}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: `${import.meta.url}/assets/favicons/lng_200x200.png`}])
 
   },
   themeConfig: {
