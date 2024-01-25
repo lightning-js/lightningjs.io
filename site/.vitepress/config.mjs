@@ -27,7 +27,7 @@ export default defineConfig({
     ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: '/favicons/lng_16x16.png'}],
     ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: '/favicons/lng_32x32.png'}],
     ['meta', { name: 'og:type', content: 'website'}],
-    ['meta', { name: 'og:image', content: '/favicons/lng_200x200.png'}]
+    ['meta', { name: 'og:image', content: '/favicons/lng_1200x630.png'}]
   ],
 
   transformPageData: (pageData) => {
@@ -38,7 +38,6 @@ export default defineConfig({
     pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pageData.frontmatter.layout === 'home2' ? 'Lightningjs' : `${title} | Lightningjs`}])
     pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pageData.frontmatter.layout === 'home2' ? 'Nexus of Information' : description}])
     pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
-
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
