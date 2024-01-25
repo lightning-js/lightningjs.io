@@ -55,7 +55,10 @@ export default defineConfig({
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/assets/favicons/lng.svg',
+    logo: {
+      light: '/favicons/lng_grey.svg',
+      dark: '/favicons/lng.svg',
+    },
     // search: {
     //   provider: 'local'
     // },
