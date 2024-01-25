@@ -20,6 +20,7 @@ import img_solid_dark from '../../../assets/home/logo_solidjs_dark.png'
 import solid_code from '../../../assets/home/solid.jsx?raw'
 
 import HeroDisplay from '../components/home/HeroDisplay.vue'
+import LightingjsInfo from  '../components/home/LightingjsInfo.vue'
 import Quote from '../components/home/Quote.vue'
 import NewFeature from '../components/home/NewFeature.vue'
 import Footer from '../components/home/Footer.vue'
@@ -131,8 +132,9 @@ const home = {
     <main class="mx-auto max-w-screen-lg bg-slate-100 dark:bg-[#020617]">
         <FancyBackground/>
         <HeroDisplay/>
-        <Quote/>
+        <LightingjsInfo/>
         <NewFeature :features="home.renderer.features"/>
+        <Quote/>
         <!-- <FancyBackground class="rotate-180"/> -->
         <FlavorCollection :title="home.flavors.title" :description="home.flavors.description" :flavors="home.flavors.flavors"/>
         <LegacyBlock :legacy="home.legacy"/>

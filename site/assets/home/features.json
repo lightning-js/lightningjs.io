@@ -1,0 +1,30 @@
+[
+    {
+        "title": "WebGL 2.0 rendering",
+        "description":  "Support for WebGL 1 and WebGL 2 devices for ultra fast rendering and pixel-for-pixel control of effects and colors!"
+    },
+    {
+        "title": "Effects",
+        "description": "Lightning comes with a wide variety of effects to create a photoshop like view of your content."
+    },
+    {
+        "title": "Multiplatform support",
+        "description": "Runs on any device with a browser, get up and running on a new device in a matter of days."
+    },
+    {
+        "title": "Advanced Font Rendering",
+        "description": "Crystal sharp fonts across any resolution or size for a best in class viewing experience"   
+    },
+    {
+        "title":  "Sprite sheet support",
+        "description": "Use sprite sheets to create high performant reusable textures in your UI."
+    },
+    {
+        "title": "Accessibility",
+        "description": "Support for color shifts, announcer and magnification for ease of access of your UI content"
+    },
+    {
+        "title": "Multithreading",
+        "description": "Faster processing by rendering on a dedicated rendering thread."
+    }
+]
