@@ -1,18 +1,32 @@
 <script>
-import FeatureCard from './FeatureCard.vue';
 import SectionHeader from './SectionHeader.vue';
+import featureData from '../../../../assets/home/features.json';
 
 export default {
-  props: ['features'],
-  components: { FeatureCard, SectionHeader }
+
+  data() {
+    return {
+      features: featureData
+    }
+  },
+  components: { SectionHeader }
 }
 
 </script>
 <template>
     <section class="pt-14 md:pt-28">
-      <SectionHeader title="New Features" description="Upcoming features of the Lightning Renderer. This part of our ecosystem is now in beta."/>
-      <div class="pt-12 place-items-center w-full grid gap-6 md:grid-cols-3">
-        <FeatureCard v-for="(data, index) in features" :feature="data" :index="index"/>
-      </div>
+      <SectionHeader title="Features" />
+      <div class="grid grid-cols-2 gap-10 pt-6">
+        <div v-if="features" v-for="feature in features " >
+          <div class="flex gap-6 items-center">
+            <span class="text-6xl text-purple-800">&#8226;</span>
+            <div class="flex-col">
+              <h2 class="text-2xl font-semibold">{{feature.title}}</h2>
+              <p>{{feature.description}}</p>
+            </div>
+          </div>
+             
+        </div>
+     </div>
     </section>
 </template>
