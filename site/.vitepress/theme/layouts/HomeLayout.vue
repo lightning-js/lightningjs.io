@@ -134,9 +134,10 @@ const home = {
         <HeroDisplay/>
         <LightingjsInfo/>
         <NewFeature :features="home.renderer.features"/>
-        <Quote/>
+       
         <!-- <FancyBackground class="rotate-180"/> -->
         <FlavorCollection :title="home.flavors.title" :description="home.flavors.description" :flavors="home.flavors.flavors"/>
+        <Quote/>
         <LegacyBlock :legacy="home.legacy"/>
         <JoinDiscord/>
     </main>

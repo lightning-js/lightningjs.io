@@ -15,7 +15,7 @@ export default {
 </script>
 <template>
     <section class="pt-14 md:pt-28">
-      <SectionHeader title="Features" description="Upcoming features of the Lightning Renderer. This part of our ecosystem is now in beta."/>
+      <SectionHeader title="Features" />
       <div class="grid grid-cols-2 gap-10 pt-6">
         <div v-if="features" v-for="feature in features " >
           <div class="flex gap-6 items-center">
