@@ -16,6 +16,8 @@
  */
 
 import { defineConfig } from 'vitepress'
+import blitsSidebar from '../v3-docs/blits/sidebar.json'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/",
@@ -43,24 +45,25 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      /*{
+        text: 'Docs',
+        items: [
+          { text: 'Blits', link: '/v3-docs/blits/introduction' },
+        ]
+      },*/
       { text: 'News', link: '/blogs'}
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
-    logo: '/favicons/lng.svg',
+    logo: {
+      light: '/favicons/lng_grey.svg',
+      dark: '/favicons/lng.svg',
+    },
     // search: {
     //   provider: 'local'
     // },
     sidebar: {
-      '/examples/': [
-        {
-          text: 'Examples',
-          items: [
-            { text: 'Markdown Examples', link: './examples/markdown-examples' },
-            { text: 'Runtime API Examples', link: './examples/api-examples' }
-          ]
-        }
-      ]
+      ...blitsSidebar
     },
 
     socialLinks: [
