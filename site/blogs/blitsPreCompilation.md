@@ -3,6 +3,7 @@ layout: blog
 title: Pre-compilation added to Blits
 description: Blits v0.6.0 has been released and introduces a new pre-compilation feature to improve the performance
 date: 2024-1-4
+author: Michiel van der Geest
 ---
 
 2024 is starting with a fresh new Blits feature: **pre-compilation** for improved performance.

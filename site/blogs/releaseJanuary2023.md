@@ -3,6 +3,7 @@ layout: blog
 title: Lightning 2.x January Release
 description: Lightning January release includes bug fixes, new features and improvements to enhance development experience; upload functionality removed, moved to Metrological SDK, CLI includes fixes and Socket.io for live reload; users encouraged to update and refer to documentation for more information.
 date: 2023-2-22
+author: Wouter-lucas van Boesschoten
 ---
 
 # Lightning core [v2.9.0](https://www.npmjs.com/package/@lightningjs/core/v/2.9.0)

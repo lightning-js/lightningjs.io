@@ -27,9 +27,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css' }],
     ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: '/favicons/lng_16x16.png'}],
-    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: '/favicons/lng_32x32.png'}],
-    ['meta', { name: 'og:type', content: 'website'}],
-    ['meta', { name: 'og:image', content: '/favicons/lng_1200x630.jpg'}]
+    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: '/favicons/lng_32x32.png'}]
   ],
 
   transformPageData: (pageData) => {
@@ -39,7 +37,7 @@ export default defineConfig({
     pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
     pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pageData.frontmatter.layout === 'home2' ? 'Lightningjs' : `${title} | Lightningjs`}])
     pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pageData.frontmatter.layout === 'home2' ? 'Nexus of Information' : description}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: pageData.frontmatter.linkImage || '/favicons/lng_1200x630.jpg'}])
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
