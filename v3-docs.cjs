@@ -82,17 +82,22 @@ async function getRemoteDocs(repo) {
 
         let sidebar = fs.readFileSync(path.join(sourcePath, 'sidebar.json'));
         sidebar = prefixLinks(prefix, JSON.parse(sidebar));
-        sidebar = JSON.stringify({
-            [`${prefix}`]: sidebar
-        })
+        // sidebar = JSON.stringify({
+        //     [`${prefix}`]: sidebar
+        // })
 
-        await fs.writeFile(path.join(sourcePath, 'sidebar.json'), sidebar);
+        // await fs.writeFile(path.join(sourcePath, 'sidebar.json'), sidebar);
 
         console.info('Move docs to allocated folder, and remove unneeded file / directories')
         await fs.move(sourcePath, targetPath);
 
         await Promise.all(repo.ignoreFiles.map(file => fs.remove(path.join(targetPath, file))));
         await fs.remove(clonedRepoPath);
+
+        return {
+            prefix,
+            sidebar
+        }
 
         console.info('Finished getting docs from : ' + repo.gitURL);
     } catch (e) {
@@ -105,7 +110,16 @@ async function getRemoteDocs(repo) {
 async function buildDocs() {
     try {
         console.info('Starting building the documentation');
-        await Promise.all(config.repos.map(repo => getRemoteDocs(repo)));
+        const docs = await Promise.all(config.repos.map(repo => getRemoteDocs(repo)));
+
+        const sidebar = {};
+        docs.forEach((doc) => {
+            sidebar[`${doc.prefix}`] = doc.sidebar;
+        });
+
+        const p = path.join(process.cwd(), 'site', '.vitepress', 'sidebars.json');
+
+        await fs.writeFile(p, JSON.stringify(sidebar));
     } catch (e) {
         console.error(e);
         throw('documentBuildFailed');
