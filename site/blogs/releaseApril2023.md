@@ -3,6 +3,7 @@ layout: blog
 title: Lightning 2.x April Release
 description: The April 2023 Lightning release brings exciting updates; Vite replaces rollup, Vitest introduced for unit testing, fixes for word wrapping and device pixel ratio. The SDK fixes a router backtrack issue. The CLI has several improvements and now comes with CORS support.
 date: 2023-4-28
+author: Wouter-lucas van Boesschoten
 ---
 
 The new April release of Lightning is here, and it's packed with exciting updates and improvements that will make your development experience even smoother. Let's take a look at the changes:

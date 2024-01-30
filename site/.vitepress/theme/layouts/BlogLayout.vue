@@ -17,12 +17,18 @@
 
 <script setup>
 import { useData } from 'vitepress';
-const {frontmatter} = useData();
+const { frontmatter } = useData();
 </script>
 <template>
-    <div class="mx-auto max-w-screen-lg">
-        <span class="text-4xl">{{ frontmatter.title }}</span>
+    <div class="mx-auto max-w-screen-md pt-12">
+        <div class="flex flex-col">
+          <span class="text-sm font-light">Date: {{frontmatter.date}}</span>
+          <span class="text-sm font-light">Author: {{frontmatter.author}}</span>
+          <span class="text-4xl font-bold pt-3">{{ frontmatter.title }}</span>
+        </div>
+       
+     
         <!--Markdown content-->
-        <Content class="vp-doc"/>
+        <Content class="vp-doc my-8"/>
     </div>  
 </template>

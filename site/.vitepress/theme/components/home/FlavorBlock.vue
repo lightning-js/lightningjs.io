@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <div v-if="flavor" class="grid grid-cols-1 place-items-center md:grid-cols-2 md:my-10">
+    <div v-if="flavor" class="grid grid-cols-1 place-items-center md:grid-cols-3 md:my-10">
         <div class="relative flex items-baseline flex-col w-11/12 py-8 md:py-12" :class="flavor.align === 'left' ? 'order-first' : 'md:order-last' ">
             <img class="stretch-0 max-auto h-16 hidden dark:block" :src="flavor.darkLogo" alt="discord logo svg" />
             <img class="stretch-0 max-auto h-16 dark:hidden" :src="flavor.logo" alt="discord logo svg" />   
@@ -36,10 +36,10 @@ export default {
             </ul>
             <LinkButton class="pt-8" :href="flavor.url" label="Learn more"></LinkButton>
         </div>
-        <div v-if="flavor && flavor.name !== 'blits'" class="w-11/12" v-html="codeblob">
+        <div v-if="flavor && flavor.name !== 'blits'" class="w-11/12 md:col-span-2" v-html="codeblob">
             
         </div>
-        <div v-if="flavor && flavor.name === 'blits'" class="w-11/12">
+        <div v-if="flavor && flavor.name === 'blits'" class="w-11/12 md:col-span-2">
             <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0"><code><span class="line"><span style="color: #E5C07B">Blits</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">Application</span><span style="color: #ABB2BF">({</span></span>
 <span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E06C75">template</span><span style="color: #ABB2BF">: `</span></span>
 <span class="line"><span style="color: #ABB2BF">        &lt;<span style="color: #E06C75">Element</span> <span style="color: #D19A66">w</span>=<span style="color: #98C379">"1920"</span> <span style="color: #D19A66">h</span>=<span style="color: #98C379">"1080"</span> <span style="color: #D19A66">color</span>=<span style="color: #98C379">"#000"</span>&gt;</span></span>
