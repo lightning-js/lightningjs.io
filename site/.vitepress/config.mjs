@@ -43,12 +43,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      /*{
+      {
         text: 'Docs',
         items: [
           { text: 'Blits', link: '/v3-docs/blits/introduction' },
+          { text: 'Solid', link: '/v3-docs/solid/getting_started' },
         ]
-      },*/
+      },
       { text: 'News', link: '/blogs'}
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],

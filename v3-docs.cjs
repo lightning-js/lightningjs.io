@@ -41,9 +41,16 @@ const config = {
     repos: [
         {
             gitURL: 'https://github.com/lightning-js/blits',
-            gitBranch: 'remote-docs',
+            gitBranch: 'master',
             sourceDir: 'docs',
             targetDir: 'blits',
+            ignoreFiles: ['README.md', '_sidebar.md', '.nojekyll', 'index.html'],
+        },
+        {
+            gitURL: 'https://github.com/lightning-js/solid',
+            gitBranch: 'main',
+            sourceDir: 'docs',
+            targetDir: 'solid',
             ignoreFiles: ['README.md', '_sidebar.md', '.nojekyll', 'index.html'],
         },
     ]
