@@ -63,7 +63,7 @@ const home = {
     flavors: [
       {
         name: 'blits',
-        url: 'https://lightning-js.github.io/blits/#/',
+        url: 'https://lightningjs.io/v3-docs/blits/introduction.html',
         logo: img_blits,
         darkLogo: img_blits_dark,
         code: blits_code,
