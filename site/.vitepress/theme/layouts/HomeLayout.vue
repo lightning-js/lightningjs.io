@@ -64,6 +64,7 @@ const home = {
       {
         name: 'blits',
         url: 'https://lightningjs.io/v3-docs/blits/introduction.html',
+        appUrl: 'https://blits-demo.lightningjs.io/#/',
         logo: img_blits,
         darkLogo: img_blits_dark,
         code: blits_code,
