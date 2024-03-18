@@ -58,9 +58,9 @@ export default defineConfig({
       light: '/favicons/lng_grey.svg',
       dark: '/favicons/lng.svg',
     },
-    // search: {
-    //   provider: 'local'
-    // },
+    search: {
+      provider: 'local'
+    },
     sidebar: {
       ...sidebars
     },
