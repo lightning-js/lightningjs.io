@@ -9,8 +9,8 @@ import discord_dark from '../../../../assets/home/discord-mark-dark.png'
   const dataFooters = [
     { title: 'Lighting - Renderer', url: 'https://github.com/lightning-js/renderer'},
     { title: 'Lightning - ThreadX', url: 'https://github.com/lightning-js/threadx'},
-    { title: 'Lighting - Blits', url:'https://lightning-js.github.io/blits/'},
-    { title: 'Lighting - Solid', url:'https://github.com/lightning-js/solid'},
+    { title: 'Lightning - Blits', url:'https://lightning-js.github.io/blits/'},
+    { title: 'Lightning - Solid', url:'https://lightning-js.github.io/solid/#/'},
 ]
 
    const dataLinks = [
@@ -29,13 +29,13 @@ import discord_dark from '../../../../assets/home/discord-mark-dark.png'
                 </div>
                 <div class="flex gap-3 items-center w-full">
                     <div class="py-6">
-                        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lightning 2.0 <span aria-hidden="true">&rarr;</span></a>
+                        <a href="https://github.com/rdkcentral/Lightning" target="_blank" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lightning 2.0 <span aria-hidden="true">&rarr;</span></a>
                     </div>
                     <DataFooter v-for="data in dataLinks" :footer="data" target="_blank"/>
                 </div>
              </div>
             <p class="px-5 text-black dark:text-slate-300 text-xs pt-8">Released under the Apache 2.0 license
-                Copyright © 2023 Lightingjs - Comcast</p>
+                Copyright © 2024 Lightingjs - Comcast</p>
         </div>
     </section>
 </template>

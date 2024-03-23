@@ -83,14 +83,18 @@ const home = {
       {
         name: 'solidjs',
         url: 'https://github.com/lightning-js/solid',
-        description: 'Lightning Renderer implemented as Universal Renderer with SolidJS',
+        appUrl: 'https://lightning-js.github.io/solid-demo-app/#/',
+        description: 'Simple and performant reactivity for building user interfaces with Lightning or the Web.',
         logo: img_solid,
         darkLogo: img_solid_dark,
         code: solid_code,
         codeType: 'jsx',
         points: [
-          'JSX',
-          'Solidjs Reactivity and Functionalities'
+          'Familiar JSX Syntax + TypeScript',
+          'Develop for Lightning and Web',
+          'Large developer community',
+          'Themeable UI Component Library',
+          'Lots of documentation and tutorials'
         ],
         align: 'right'
       }
