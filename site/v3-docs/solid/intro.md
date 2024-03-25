@@ -4,7 +4,7 @@
 
 # SolidJS for Lightning 3
 
-Solid-Lightning is a UI framework for the [Lightning 3 Renderer](https://github.com/lightning-js/renderer) built with [SolidJS](https://www.solidjs.com/) [Universal Renderer](https://github.com/solidjs/solid/releases/tag/v1.2.0). It allows you to declaratively construct lightning nodes with reactive primitives, just as you would construct a DOM tree in SolidJS.
+Solid-Lightning is a UI framework for the [Lightning 3 Renderer](https://github.com/lightning-js/renderer) built with [SolidJS](https://www.solidjs.com/) [Universal Renderer](https://github.com/solidjs/solid/releases/tag/v1.2.0). It allows you to declaratively construct lightning nodes with reactive primitives.
 
 ### Other Resources
 

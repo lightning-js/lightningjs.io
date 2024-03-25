@@ -91,7 +91,6 @@ const home = {
         codeType: 'jsx',
         points: [
           'Familiar JSX Syntax + TypeScript',
-          'Develop for Lightning and Web',
           'Large developer community',
           'Themeable UI Component Library',
           'Lots of documentation and tutorials'
