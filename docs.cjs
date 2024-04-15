@@ -194,3 +194,72 @@ buildDocs().then(() => {
   console.error(err);
   console.error('Building the documentation failed.');
 });
+
+const L3typedoc = {
+  tempDir: path.join(process.cwd(), '.temp-repos'),
+  targetBasePath: path.join(process.cwd(), 'public', 'api'),
+  repos: [
+      {
+          url: 'https://github.com/lightning-js/renderer',
+          branch: 'main',
+          targetDir: 'renderer',
+          sourceDir: 'typedocs',
+      },
+      {
+          url: 'https://github.com/lightning-js/threadx',
+          branch: 'main',
+          targetDir: 'renderer',
+          sourceDir: 'typedocs',
+      }
+  ]
+}
+
+async function getL3Typedocs(repo) {
+  const clonedRepoPath = path.join(L3typedoc
+  .tempDir, path.basename(repo.url, '.git'));
+  const targetPath = path.join(L3typedoc
+  .targetBasePath, repo.targetDir);
+
+  try {
+      await fs.remove(targetPath);
+      await fs.remove(clonedRepoPath);
+
+      await git
+          .clone(repo.url, clonedRepoPath)
+          .cwd(clonedRepoPath)
+          .checkout(repo.branch)
+
+      shell.cd(clonedRepoPath);
+
+      const tdSourcePath = path.join(clonedRepoPath, 'typedocs');
+      const tdTargetPath = path.join(targetPath, repo.targetDir);
+
+      const build = await exec('pnpm install && pnpm run build && pnpm run typedoc');
+      if (build === 0) {
+          console.info(`TypeDocs for ${repo.url} built successfully.`);
+      } else {
+          console.error(`TypeDocs for ${repo.url} failed with result:`, build);
+      }
+
+      await fs.move(tdSourcePath, tdTargetPath);
+  
+  } catch (e) {
+      console.error('An exception occurred while getting docs from :' + repo.url);
+      console.error(e);
+      throw ('repoCloningFailed');
+  }
+}
+
+async function buildL3Typedocs() {
+  try {
+    console.info('Starting building L3 typedocs');
+      await Promise.all(L3typedoc
+      .repos.map(repo => getL3Typedocs(repo)));
+  }
+  catch(e) {
+      console.error('An exception occurred while getting docs from :' + repo.url);
+      console.log(e)
+  }
+}
+
+buildL3Typedocs()
