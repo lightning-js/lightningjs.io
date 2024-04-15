@@ -1,21 +1,9 @@
 # Base Components
 
-There are three primitives provided by Solid Lightning:
+There are two primitives provided by Solid Lightning:
 
-- Canvas
 - View
 - Text
-
-## Canvas
-
-The `<Canvas>` component will be used once as the root component in your App to initialize Lightning and create the base canvas tag.
-
-### Props
-
-- `ref`: Reference to root node and the renderer
-- `options`: Object with options to pass to Renderer
-- `onFirstRender`: Callback to run when app is first loaded, useful for unit tests
-- `children`: JSX children to render
 
 ## View
 
@@ -86,6 +74,22 @@ Read more about [Solids Lifecycle](https://docs.solidjs.com/references/api-refer
   onCreate: (target: ElementNode)
   onLoad: (target: INode, nodeLoadedPayload: NodeLoadedPayload)
   onFail: (target: INode, nodeFailedPayload: NodeFailedPayload)
-  onBeforeLayout: (child: ElementNode, dimensions: Dimensions)
+  onBeforeLayout: (child: ElementNode, dimensions: Dimensions) => boolean
   onLayout: (child: ElementNode, dimensions: Dimensions)
+```
+
+## use: (Directives) in Solid
+
+SolidJS has built in [Directives](https://www.solidjs.com/docs/latest/api#use___) support via `use:` property. These only work on root elements `node` and `text`. Meaning you can't use `View` or `Text` with directives so instead do:
+
+```
+<node
+  use:withPadding={[10, 15]}
+  {...props}
+  style={{
+    color: '#00000099',
+    borderRadius: 8,
+    border: { width: 2, color: '#ffffff' },
+  }}
+>
 ```

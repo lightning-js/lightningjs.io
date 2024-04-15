@@ -20,6 +20,7 @@ import sidebars from './sidebars.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   base: "/",
   title: "Lightningjs",
   description: "Lightningjs Nexus of Information",
