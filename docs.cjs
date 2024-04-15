@@ -53,7 +53,8 @@ const config = {
       targetDir: 'lightning-core-reference',
       ignoreFiles: ['README.md', '_sidebar.md'],
       typedocSourceDir: 'typedocs',
-      typedocTargetDir: 'lightning-core'
+      typedocTargetDir: 'lightning-core',
+      typedocBuildRequired: true
     },
     {
       gitURL: 'https://github.com/rdkcentral/Lightning-UI',
@@ -76,7 +77,8 @@ const config = {
       targetDir: 'lightning-sdk-reference',
       ignoreFiles: ['README.md', 'changelog.md', 'getting-started.md', '.nojekyll', 'index.html', 'package.json', '_sidebar.md'],
       typedocSourceDir: 'typedocs',
-      typedocTargetDir: 'lightning-sdk'
+      typedocTargetDir: 'lightning-sdk',
+      typedocBuildRequired: false
     },
   ]
 };
@@ -107,7 +109,8 @@ async function getRemoteDocs(repo) {
       const tdSourcePath = path.join(clonedRepoPath, repo.typedocSourceDir);
       const tdTargetPath = path.join(config.typedocTargetBasePath, repo.typedocTargetDir);
       shell.cd(clonedRepoPath);
-      const result = await exec('npm install && npm run build && npm run typedoc');
+      const typedocCommand = `npm install ${repo.typedocBuildRequired ? '&& npm run build' : ''} && npm run typedoc`
+      const result = await exec(typedocCommand);
       if (result === 0) {
         await fs.move(tdSourcePath, tdTargetPath);
         console.info(`TypeDocs for ${repo.gitURL} built successfully.`);
