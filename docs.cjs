@@ -208,7 +208,7 @@ const L3typedoc = {
       {
           url: 'https://github.com/lightning-js/threadx',
           branch: 'main',
-          targetDir: 'renderer',
+          targetDir: 'threadx',
           sourceDir: 'typedocs',
       }
   ]
@@ -257,7 +257,7 @@ async function buildL3Typedocs() {
       .repos.map(repo => getL3Typedocs(repo)));
   }
   catch(e) {
-      console.error('An exception occurred while getting docs from :' + repo.url);
+      console.error('An exception occurred while getting docs from');
       console.log(e)
   }
 }
