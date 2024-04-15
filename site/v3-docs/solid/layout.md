@@ -39,6 +39,9 @@ Additionally, flex will automatically layout Text nodes. Anytime a View with dis
 - `alignItems`: 'flexStart' | 'flexEnd' | 'center'
 - `display`: 'flex'
 - `flexDirection`: 'row' | 'column'
+- `flexBoundary`: 'contain' | 'fixed' (default updates container size based on children size on alignItems:flexStart only. Set to `fixed` to use parent width when width isn't set.)
+- `flexItem`: boolean (set to false on a child to remove it from flex calculations)
+- `flexOrder`: number (set the order on children to change layout order)
 - `gap`: number
 - `justifyContent`: 'flexStart' | 'flexEnd' | 'center' | 'spaceBetween' | 'spaceEvenly'
 
@@ -53,6 +56,6 @@ You can put the following properties on the items to control the layout further.
 
 ## Layout Callbacks
 
-When layout occurs on a container with `display: flex` during initial rendering, `updateLayout` is called calculating flex layout. If you want to tie into the layout system you can use `onBeforeLayout` and `onLayout` hooks to update the element with the following signature `(node, { width, height})`. You can use this callback to resize the parent node before flex is calculated using `onBeforeLayout` and after flex with `onLayout`. If you do, call `parent.updateLayout` for it to also resize.
+When layout occurs on a container with `display: flex` during initial rendering, `updateLayout` is called calculating flex layout. If you want to tie into the layout system you can use `onBeforeLayout` and `onLayout` hooks to update the element with the following signature `(node, { width, height})`. You can use this callback to resize the parent node before flex is calculated using `onBeforeLayout` and after flex with `onLayout`. If you do change layout with onBeforeLayout return true to force parent call `parent.updateLayout` to also resize.
 
 Additionally, if you ever reason a child element, call `updateLayout` on the parent to perform layout.
