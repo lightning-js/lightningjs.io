@@ -100,13 +100,13 @@ async function getRemoteDocs(repo) {
 
         await Promise.all(repo.ignoreFiles.map(file => fs.remove(path.join(targetPath, file))));
         await fs.remove(clonedRepoPath);
-
+        console.info('Finished getting docs from : ' + repo.gitURL);
         return {
             prefix,
             sidebar
         }
 
-        console.info('Finished getting docs from : ' + repo.gitURL);
+        
     } catch (e) {
         console.error('An exception occurred while getting docs from :' + repo.gitURL);
         console.error(e);

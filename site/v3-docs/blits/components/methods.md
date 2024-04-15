@@ -14,6 +14,7 @@ You can reference your Component's methods in the template by using a `$`-sign (
 
 In the javascript code of a Component you can reference methods directly on the `this`-scope (i.e. `this.getData()`). Similar as with `internal` state and `props`, there is no need to prefix with `methods`, for easy access.
 
+
 ```js
 export default Blits('Carousel', {
   template: `
