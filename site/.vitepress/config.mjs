@@ -46,7 +46,7 @@ export default defineConfig({
       {
         text: 'Docs',
         items: [
-          { text: 'Blits', link: '/v3-docs/blits/introduction' },
+          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro' },
           { text: 'Solid', link: '/v3-docs/solid/getting_started' },
         ]
       },
