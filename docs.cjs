@@ -253,8 +253,7 @@ async function getL3Typedocs(repo) {
 async function buildL3Typedocs() {
   try {
     console.info('Starting building L3 typedocs');
-      await Promise.all(L3typedoc
-      .repos.map(repo => getL3Typedocs(repo)));
+      await Promise.all(L3typedoc.repos.map(repo => getL3Typedocs(repo)));
   }
   catch(e) {
       console.error('An exception occurred while getting docs from');
