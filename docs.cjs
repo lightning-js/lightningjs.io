@@ -235,7 +235,7 @@ async function getL3Typedocs(repo) {
       shell.cd(clonedRepoPath);
 
       const tdSourcePath = path.join(clonedRepoPath, 'typedocs');
-      const tdTargetPath = path.join(targetPath, repo.targetDir);
+      const tdTargetPath = path.join(targetPath);
 
       const build = await exec('pnpm install && pnpm run build && pnpm run typedoc');
       if (build === 0) {
