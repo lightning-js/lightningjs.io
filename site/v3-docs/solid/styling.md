@@ -33,7 +33,6 @@ The style attribute takes an object of properties and passes them to the Lightni
 
 For UI Component libraries you can also pass an array to style (with nested arrays). This allows for easy chaining of styling. This doesn't do a deep merge, so any state styles will be overriden by the top level style tag. Additional, styles are applied in the order of the array, so `props.style` will override `styles.Container`.
 
-
 ```jsx
 const Top: Component<TopProps> = (props: TopProps) => {
   return (

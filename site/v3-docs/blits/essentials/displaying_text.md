@@ -2,7 +2,6 @@
 
 ## Displaying Text
 
-
 Besides displaying images, it is also very common to have _texts_ in an App.
 
 Blits comes with a built-in `<Text>`-tag for displaying and styling texts in a simple and intuitive way.

@@ -11,12 +11,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
+    "flexsearch": "^0.7.43",
     "fs-extra": "^11.2.0",
     "postcss": "^8.4.31",
     "shelljs": "^0.8.5",
     "simple-git": "^3.21.0",
     "tailwindcss": "^3.3.3",
     "vitepress": "^1.0.0-rc.20",
+    "vitepress-plugin-search": "^1.0.4-alpha.22",
     "vue": "^3.3.4"
   },
   "postcss": {
@@ -27,7 +29,10 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.16",
+    "@orama/plugin-vitepress": "^2.0.16",
     "delaunay-fast": "^1.0.1",
-    "shiki-es": "^0.14.0"
+    "pagefind": "^1.1.0",
+    "shiki-es": "^0.14.0",
+    "vitepress-plugin-pagefind": "^0.2.14"
   }
 }

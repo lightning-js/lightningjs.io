@@ -17,6 +17,10 @@
 
 import { defineConfig } from 'vitepress'
 import sidebars from './sidebars.json'
+import { pagefindPlugin } from 'vitepress-plugin-pagefind'
+// import { SearchPlugin } from "vitepress-plugin-search";
+const blitsPath = 'v3-docs/blits';
+const solidPath = 'v3-docs/solid';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -59,13 +63,9 @@ export default defineConfig({
       light: '/favicons/lng_grey.svg',
       dark: '/favicons/lng.svg',
     },
-    // search: {
-    //   provider: 'local'
-    // },
     sidebar: {
       ...sidebars
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' },
       { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
@@ -73,6 +73,22 @@ export default defineConfig({
   },
   vite: {
     base: "/",
-    publicDir: 'static'
+    publicDir: 'static',
+    plugins: [
+      pagefindPlugin({
+        resultOptimization: false,
+        filter(searchItem, idx, originArray) {
+          console.log(searchItem);
+          let f = '';
+          if(window.location.pathname.includes(blitsPath)) {
+            f = blitsPath;
+          }
+          if(window.location.pathname.includes(solidPath)) {
+            f = solidPath;
+          }
+          return searchItem.route.includes(f) 
+        }
+      })
+    ]
   }
 })
