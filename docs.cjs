@@ -34,6 +34,7 @@ function exec(command) {
       if (code !== 0) {
         console.error(stderr);
       }
+      console.info(stdout);
       resolve(code);
     });
   })
@@ -95,7 +96,8 @@ const config = {
       typedocBuildRequired: true,
       docType: 'L3',
       onlyTypedoc: true
-    }, {
+    },
+    {
       gitURL: 'https://github.com/lightning-js/threadx',
       gitBranch: 'main',
       targetDir: 'threadx',
@@ -131,7 +133,7 @@ async function getRemoteDocs(repo) {
 
     // generate typedoc (if they exist)
     if (repo.typedocSourceDir && repo.typedocTargetDir) {
-      
+
       console.info(`Building TypeDocs for ${repo.gitURL}`);
       const tdSourcePath = path.join(clonedRepoPath, repo.typedocSourceDir);
       const tdTargetPath = path.join(config.typedocTargetBasePath, repo.typedocTargetDir);
