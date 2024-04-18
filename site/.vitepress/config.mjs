@@ -53,6 +53,8 @@ export default defineConfig({
         items: [
           { text: 'Blits', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
           { text: 'Solid', link: '/v3-docs/solid/getting_started', target: '_blank' },
+          { text: 'Renderer', link: '/api/renderer', target: '_blank' },
+          { text: 'Threadx', link: '/api/threadx', target: '_blank' },
         ]
       },
       { text: 'News', link: '/blogs'}

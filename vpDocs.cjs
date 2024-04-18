@@ -25,7 +25,7 @@ const config = {
     repos: [
         {
             url: 'https://github.com/lightning-js/blits',
-            branch: 'master',
+            branch: 'vitepress',
             sourceDir: 'docs',
             targetDir: 'blits',
             name: 'Blits',
