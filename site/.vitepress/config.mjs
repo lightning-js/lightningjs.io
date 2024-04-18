@@ -51,8 +51,8 @@ export default defineConfig({
       {
         text: 'Docs',
         items: [
-          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro' },
-          { text: 'Solid', link: '/v3-docs/solid/getting_started' },
+          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
+          { text: 'Solid', link: '/v3-docs/solid/getting_started', target: '_blank' },
         ]
       },
       { text: 'News', link: '/blogs'}
@@ -74,21 +74,5 @@ export default defineConfig({
   vite: {
     base: "/",
     publicDir: 'static',
-    plugins: [
-      pagefindPlugin({
-        resultOptimization: false,
-        filter(searchItem, idx, originArray) {
-          console.log(searchItem);
-          let f = '';
-          if(window.location.pathname.includes(blitsPath)) {
-            f = blitsPath;
-          }
-          if(window.location.pathname.includes(solidPath)) {
-            f = solidPath;
-          }
-          return searchItem.route.includes(f) 
-        }
-      })
-    ]
   }
 })

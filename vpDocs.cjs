@@ -72,7 +72,7 @@ async function generateVitePressDocs(repo) {
             export default defineConfig({
                 ignoreDeadLinks: true,
                 base: '/v3-docs/${repo.targetDir}/',
-                title: 'Lightningjs ${repo.name}',
+                title: 'Lightningjs - ${repo.name}',
                 description: 'Lightningjs ${repo.name} Documentation',
                 outDir: '../vpDocs',
                 head: [
@@ -84,22 +84,11 @@ async function generateVitePressDocs(repo) {
                     publicDir: 'static'
                 },
                 themeConfig: {
-                    siteTitle: 'Lightningjs',
+                    siteTitle: 'Lightningjs - ${repo.name}',
                     sidebar,
                     search: {
                         provider: 'local'
                     },
-                    nav: [
-                        { text: 'Home', link: '../../' },
-                        {
-                          text: 'Docs',
-                          items: [
-                            { text: 'Blits', link: '/v3-docs/blits/getting_started/intro' },
-                            { text: 'Solid', link: '/v3-docs/solid/intro' },
-                          ]
-                        },
-                        { text: 'News', link: '/blogs'}
-                    ],
                     logo: {
                         light: 'https://lightningjs.io/favicons/lng_grey.svg',
                         dark: 'https://lightningjs.io/favicons/lng.svg',
