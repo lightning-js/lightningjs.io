@@ -145,14 +145,6 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-.VPNav {
-  backdrop-filter: blur(5px);
-}
-
-.VPNav .content-body {
-  background-color: transparent !important;
-}
-
 .VPNavBar .title {
   display: flex;
   flex-direction: row-reverse;

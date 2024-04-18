@@ -129,6 +129,7 @@ async function getRemoteDocs(repo) {
   } catch (e) {
     console.error('An exception occurred while getting docs from :' + repo.gitURL);
     console.error(e);
+    await fs.remove(clonedRepoPath);
     throw ('repoCloningFailed');
   }
 }
@@ -245,7 +246,7 @@ async function getL3Typedocs(repo) {
       }
 
       await fs.move(tdSourcePath, tdTargetPath);
-  
+      await fs.remove(clonedRepoPath);
   } catch (e) {
       console.error('An exception occurred while getting docs from :' + repo.url);
       console.error(e);
@@ -256,7 +257,8 @@ async function getL3Typedocs(repo) {
 async function buildL3Typedocs() {
   try {
     console.info('Starting building L3 typedocs');
-      await Promise.all(L3typedoc.repos.map(repo => getL3Typedocs(repo)));
+    await Promise.all(L3typedoc.repos.map(repo => getL3Typedocs(repo)));
+    await fs.remove(L3typedoc.tempDir);
   }
   catch(e) {
       console.error('An exception occurred while getting docs from');

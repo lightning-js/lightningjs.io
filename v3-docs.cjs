@@ -133,9 +133,11 @@ async function buildDocs() {
     }
 }
 
-buildDocs().then(() => {
-        console.log('The documentation is ready.')
-    }, (err) => {
-        console.error(err);
-        console.error('Building the documentation failed.');
-});
+// buildDocs().then(() => {
+//         console.log('The documentation is ready.')
+//     }, (err) => {
+//         console.error(err);
+//         console.error('Building the documentation failed.');
+// });
+
+console.info('Remove node v3-docs.cjs from execution sequence')
