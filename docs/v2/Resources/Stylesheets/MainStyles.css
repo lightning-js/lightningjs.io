@@ -1,0 +1,231 @@
+/*<meta />*/
+
+body
+{
+	font-family: Arial;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+	color: #5a4fc1;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 10px;
+}
+
+p.note
+{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	background-color: #f0f7fb;
+	border: solid 1px #3498db;
+	border-radius: 6px;
+	line-height: 18px;
+	/*    mc-auto-number-format: '{b}NOTE: {/b}';*/
+	overflow: hidden;
+	padding: 12px;
+}
+
+p.ListHeading
+{
+	page-break-after: avoid;
+	page-break-inside: avoid;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+p.Caption
+{
+	font-weight: normal;
+	font-style: italic;
+	page-break-before: avoid;
+	margin-top: 0;
+	font-size: 9pt;
+	margin-bottom: 12px;
+	page-break-inside: avoid;
+	column-break-before: avoid;
+	frame-break-before: avoid;
+	mc-auto-number-format: 'CF:{chapnum}-{n+}:  ';
+}
+
+img
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	page-break-inside: avoid;
+}
+
+p.heading_bold
+{
+	page-break-after: avoid;
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top: 10pt;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+img
+{
+	border: none;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+	color: #006600;
+}
+
+.body-container
+{
+	padding-top: 2em;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+/*== Other topics header bar styles ==*/
+
+.title-bar-container
+{
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	/*adds the shadow effect to the header*/
+}
+
+/*== madcap proxy assigned styles ==*/
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom-width: 0;
+	color: #888888;
+}
+
+li
+{
+	margin-bottom: 10px;
+}
+
+@media tablet
+{
+	.body-container
+	{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+MadCap|xref.TopicRef
+{
+	mc-format: '{paratext}';
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	text-decoration: inherit;
+}
+
+p.instruction
+{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	line-height: 18px;
+	overflow: hidden;
+	background-position-y: center;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-image: url('../Images/Icons/instruction.png');
+}
+
+img.left_icon
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	page-break-inside: avoid;
+	width: 0px;
+	height: 0px;
+	mc-float: outside-frame-left;
+}
+
+img.icon
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	page-break-inside: avoid;
+	float: left;
+	left: 10px;
+	top: 2764px;
+	margin-left: -20px;
+}
+
+blockquote.Note
+{
+	margin-left: 0;
+}
+
