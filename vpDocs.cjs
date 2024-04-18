@@ -28,6 +28,7 @@ const config = {
             branch: 'vitepress',
             sourceDir: 'docs',
             targetDir: 'blits',
+            landing: 'getting_started/intro',
             name: 'Blits',
             ignoreFiles: ['README.md', '_sidebar.md', '.nojekyll', 'index.html'],
         },
@@ -36,6 +37,7 @@ const config = {
             branch: 'main',
             sourceDir: 'docs',
             targetDir: 'solid',
+            landing: 'intro',
             name: 'Solid',
             ignoreFiles: ['README.md', '_sidebar.md', '.nojekyll', 'index.html'],
         },
@@ -94,7 +96,7 @@ async function generateVitePressDocs(repo) {
                         dark: 'https://lightningjs.io/favicons/lng.svg',
                     },
                     socialLinks: [
-                        { icon: 'github', link: 'https://github.com/lightning-js' },
+                        { icon: 'github', link: 'https://github.com/lightning-js/${repo.targetDir}' },
                         { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
                     ]
                 }
@@ -109,7 +111,7 @@ async function generateVitePressDocs(repo) {
         shell.ls('**/**.html').forEach(async (file) => {
             const target = path.join(vpDocs, file);
             const html = await fs.readFile(target, 'utf8');
-            await fs.writeFile(target, html.replace(`href="/v3-docs/${repo.targetDir}/"`, `href="https://www.lightningjs.io"`));
+            await fs.writeFile(target, html.replace(`href="/v3-docs/${repo.targetDir}/"`, `href="/v3-docs/${repo.targetDir}/${repo.landing}"`));
         });
         console.info('move docs to public');
         await fs.move(vpDocs, targetPath);
