@@ -107,8 +107,10 @@ async function generateVitePressDocs(repo) {
         console.info('build vitepress docs');
         await exec('vitepress build docs');
         const vpDocs = path.join(clonedRepoPath, 'vpDocs');
+        shell.mkdir('-p', vpDocs);
         shell.cd(vpDocs);
-        shell.ls('**/**.html').forEach(async (file) => {
+        shell.find('.').filter(function(file) { return file.match(/\.html$/); }).forEach(async (file) => {
+            console.log(file)
             const target = path.join(vpDocs, file);
             const html = await fs.readFile(target, 'utf8');
             await fs.writeFile(target, html.replace(`href="/v3-docs/${repo.targetDir}/"`, `href="/v3-docs/${repo.targetDir}/${repo.landing}"`));
