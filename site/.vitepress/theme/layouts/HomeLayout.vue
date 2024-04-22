@@ -83,6 +83,7 @@ const home = {
       {
         name: 'solidjs',
         url: 'https://github.com/lightning-js/solid',
+        appUrl: "https://lightning-js.github.io/solid-demo-app/#/",
         description: 'Lightning Renderer implemented as Universal Renderer with SolidJS',
         logo: img_solid,
         darkLogo: img_solid_dark,
