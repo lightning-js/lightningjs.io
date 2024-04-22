@@ -17,10 +17,6 @@
 
 import { defineConfig } from 'vitepress'
 import sidebars from './sidebars.json'
-import { pagefindPlugin } from 'vitepress-plugin-pagefind'
-// import { SearchPlugin } from "vitepress-plugin-search";
-const blitsPath = 'v3-docs/blits';
-const solidPath = 'v3-docs/solid';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -51,10 +47,10 @@ export default defineConfig({
       {
         text: 'Docs',
         items: [
-          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
-          { text: 'Solid', link: '/v3-docs/solid/getting_started', target: '_blank' },
-          { text: 'Renderer', link: '/api/renderer', target: '_blank' },
-          { text: 'Threadx', link: '/api/threadx', target: '_blank' },
+          { text: 'Blits App Framework', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
+          { text: 'Renderer API', link: '/api/renderer', target: '_blank' },
+          { text: 'Threadx API', link: '/api/threadx', target: '_blank' },
+          { text: "Solid", link: '/v3-docs/solid/getting_started', target: '_blank' },
         ]
       },
       { text: 'News', link: '/blogs'}
