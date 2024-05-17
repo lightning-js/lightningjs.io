@@ -145,18 +145,18 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-.VPNav {
-  backdrop-filter: blur(5px);
-}
-
 .VPNav .content-body {
+  backdrop-filter: blur(5px);
   background-color: transparent !important;
 }
 
-.VPNavBar .title {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 8px;
+.VPNav .curtain {
+  display: none;
+}
+
+.VPImage {
+  margin-left: 8px;
+  order: 1;
 }
 
 .shiki {

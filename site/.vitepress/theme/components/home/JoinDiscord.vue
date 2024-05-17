@@ -16,7 +16,7 @@ import LinkButton from './LinkButton.vue';
                 <div class="mt-4 flex items-center justify-center space-x-3 text-base text-center">
                     <div class="font-semibold text-black dark:text-gray-200">Find help, or help us improve our eco system</div>
                 </div>
-                <LinkButton class="mt-10" label="Send me an invite" href="https://discord.com/invite/Mpj4HjHyh8"/>
+                <LinkButton class="mt-10" label="Send me an invite" href="https://discord.com/invite/Mpj4HjHyh8" target="_blank"/>
             </figcaption>
         </figure>
     </section>

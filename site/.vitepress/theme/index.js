@@ -28,11 +28,6 @@ import FancyBackground from './components/home/FancyBackground.vue';
 
 export default {
   extends: Theme,
-  themeConfig: {
-    search: {
-      provider: 'local'
-    }
-  },
   Layout: () => {
     return h(Theme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
