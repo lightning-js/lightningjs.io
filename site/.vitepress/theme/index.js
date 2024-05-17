@@ -23,16 +23,12 @@ import './css/tailwind.postcss'
 import BlogLayout from './layouts/BlogLayout.vue';
 import BlogsLayout from './layouts/BlogsLayout.vue';
 import HomeLayout from './layouts/HomeLayout.vue';
+import L2Layout from './layouts/L2Layout.vue';
 
 import FancyBackground from './components/home/FancyBackground.vue';
 
 export default {
   extends: Theme,
-  themeConfig: {
-    search: {
-      provider: 'local'
-    }
-  },
   Layout: () => {
     return h(Theme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
@@ -42,7 +38,7 @@ export default {
     app.component('blog', BlogLayout)
     app.component('blogs', BlogsLayout)
     app.component('home2', HomeLayout)
-
+    app.component('l2layout', L2Layout)
     app.component('FancyBackground', FancyBackground)
   }
 }

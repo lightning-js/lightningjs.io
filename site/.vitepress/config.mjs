@@ -20,6 +20,7 @@ import sidebars from './sidebars.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   base: "/",
   title: "Lightningjs",
   description: "Lightningjs Nexus of Information",
@@ -43,11 +44,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Playground', link: 'https://playground.lightningjs.io', target: '_blank'},
       {
         text: 'Docs',
         items: [
-          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro' },
-          { text: 'Solid', link: '/v3-docs/solid/getting_started' },
+          {
+            text: 'Lightning Ecosystem',
+            items: [
+              { text: 'Blits App Framework', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
+              { text: 'Renderer API', link: '/api/renderer', target: '_blank' },
+              { text: 'Threadx API', link: '/api/threadx', target: '_blank' },
+            ]
+          }
         ]
       },
       { text: 'News', link: '/blogs'}
@@ -58,13 +66,9 @@ export default defineConfig({
       light: '/favicons/lng_grey.svg',
       dark: '/favicons/lng.svg',
     },
-    // search: {
-    //   provider: 'local'
-    // },
     sidebar: {
       ...sidebars
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' },
       { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
@@ -72,6 +76,6 @@ export default defineConfig({
   },
   vite: {
     base: "/",
-    publicDir: 'static'
+    publicDir: 'static',
   }
 })

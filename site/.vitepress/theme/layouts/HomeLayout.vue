@@ -4,20 +4,16 @@ import img_multithreading from '../../../assets/home/feature_multithreading.png'
 import img_shader from '../../../assets/home/feature_shader.png'
 import img_batched from '../../../assets/home/feature_batched.png'
 
-//these need their own
-import img_fontrendering from '../../../assets/home/feature_font.png'
+import solid_code from '../../../assets/home/solid.jsx?raw'
+import img_solid from '../../../assets/home/logo_solidjs_light.png'
+import img_solid_dark from '../../../assets/home/logo_solidjs_dark.png'
 
-//frameworks
-//blits data
 import img_blits from '../../../assets/home/blits-logo.png'
 import img_blits_dark from '../../../assets/home/blits-logo-white.png'
 import blits_code from '../../../assets/home/blits.js?raw'
 
-//need light mode image
-//solid data
-import img_solid from '../../../assets/home/logo_solidjs_light.png'
-import img_solid_dark from '../../../assets/home/logo_solidjs_dark.png'
-import solid_code from '../../../assets/home/solid.jsx?raw'
+//these need their own
+import img_fontrendering from '../../../assets/home/feature_font.png'
 
 import HeroDisplay from '../components/home/HeroDisplay.vue'
 import LightingjsInfo from  '../components/home/LightingjsInfo.vue'
@@ -25,8 +21,9 @@ import Quote from '../components/home/Quote.vue'
 import NewFeature from '../components/home/NewFeature.vue'
 import Footer from '../components/home/Footer.vue'
 import JoinDiscord from '../components/home/JoinDiscord.vue'
-import FlavorCollection from '../components/home/FlavorCollection.vue'
 import LegacyBlock from '../components/home/LegacyBlock.vue'
+import BlitsContent from '../components/home/BlitsContent.vue'
+import OtherFrameworks from '../components/home/OtherFrameworks.vue'
 
 const home = {
   renderer: {
@@ -57,90 +54,46 @@ const home = {
       }
     ],
   },
-  flavors: {
-    title: 'Choose your Flavor',
-    description: 'The Renderer is not designed for direct application development but instead to provide a lightweight API for front-end applications we have some flavors available.',
-    flavors: [
-      {
-        name: 'blits',
-        url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
-        appUrl: 'https://blits-demo.lightningjs.io/#/',
-        logo: img_blits,
-        darkLogo: img_blits_dark,
-        code: blits_code,
-        codeType: 'js',
-        description: 
-          `Our in-house built, fully featured, App Development Framework. Blits is easy and intuitive to work with. 
-          It goes hand in hand with the Lightning renderer, is lightweight and is built with performance first in mind.`,
-        points: [
-          'Easy to read XML-style templating',
-          'Built-in Reactivity',
-          'Reusable Components',
-          'App Routing'
-        ],
-        align: 'left'
-      },
-      {
-        name: 'solidjs',
-        url: 'https://github.com/lightning-js/solid',
-        description: 'Lightning Renderer implemented as Universal Renderer with SolidJS',
-        logo: img_solid,
-        darkLogo: img_solid_dark,
-        code: solid_code,
-        codeType: 'jsx',
-        points: [
-          'JSX',
-          'Solidjs Reactivity and Functionalities'
-        ],
-        align: 'right'
-      }
-    ]
-  },
+  otherFrameworks: [
+    // {
+    //   name: 'blits',
+    //   url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
+    //   appUrl: 'https://blits-demo.lightningjs.io/#/',
+    //   logo: img_blits,
+    //   darkLogo: img_blits_dark,
+    //   sampleCode: blits_code,
+    //   codeType: 'js'
+    // },
+    {
+      name: 'Solid',
+      url: 'https://github.com/lightning-js/solid',
+      appUrl: "https://lightning-js.github.io/solid-demo-app/#/",
+      sampleCode: solid_code,
+      codeType: 'jsx',
+      logo: img_solid,
+      darkLogo: img_solid_dark,
+    }
+  ],
   legacy: {
     title: 'Lightning 2',
-    description: 'Lightning 2 and its counterparts are still supported and you can find our reference documentation about these libraries here:',
-    links: [
-      {
-        title: 'Getting Started',
-        url: 'https://lightningjs.io/docs/#/getting-started/index'
-      },
-      {
-        title: 'Lightning Core',
-        url: 'https://lightningjs.io/docs/#/lightning-core-reference/index'
-      },
-      {
-        title: 'Lightning SDK',
-        url: 'https://lightningjs.io/docs/#/lightning-sdk-reference/index'
-      },
-      {
-        title: 'Lightning CLI',
-        url: 'https://lightningjs.io/docs/#/lightning-cli-reference/index'
-      },
-      {
-        title: 'Lightning UI',
-        url: 'https://lightningjs.io/docs/#/lightning-ui-reference/index'
-      },
-      {
-        title: 'Lightning Tools',
-        url: 'https://lightningjs.io/docs/#/tools/index'
-      }
-    ]
+    description: 'Lightning 2 and its counterparts are still supported and you can find our helpful links regarding these libraries here:'
   }
 }
 
 </script>
 <template>
-    <main class="mx-auto max-w-screen-lg bg-slate-100 dark:bg-[#020617]">
-        <FancyBackground/>
-        <HeroDisplay/>
-        <LightingjsInfo/>
-        <NewFeature :features="home.renderer.features"/>
-       
-        <!-- <FancyBackground class="rotate-180"/> -->
-        <FlavorCollection :title="home.flavors.title" :description="home.flavors.description" :flavors="home.flavors.flavors"/>
-        <Quote/>
-        <LegacyBlock :legacy="home.legacy"/>
-        <JoinDiscord/>
-    </main>
-    <Footer/>
+  <FancyBackground/>
+  <main class="mx-auto max-w-screen-lg relative flex flex-col items-center gap-20">    
+    <HeroDisplay class="mt-6"/>
+    <LightingjsInfo class="mt-24"/>
+    <NewFeature :features="home.renderer.features"/>
+    <BlitsContent/>
+    <OtherFrameworks :frameworks="home.otherFrameworks"/>
+    <!-- <FancyBackground class="rotate-180"/> -->
+    <!-- <FlavorCollection title="Build your App" :description="home.flavors.description" :flavors="home.flavors.flavors"/> -->
+    <Quote/>
+    <LegacyBlock :legacy="home.legacy"/>
+    <JoinDiscord/>
+  </main>
+  <Footer class="mt-10"/>
 </template>

@@ -34,8 +34,8 @@ export default {
                     &#8226; {{ p }}
                 </li>
             </ul>
-            <LinkButton class="pt-3" :href="flavor.url" label="Learn more"></LinkButton>
-            <LinkButton class="pt-3" :href="flavor.appUrl" label="Example App"></LinkButton>
+            <LinkButton class="pt-3" :href="flavor.url" target="_blank" label="Learn more"></LinkButton>
+            <LinkButton class="pt-3" :href="flavor.appUrl" target="_blank" label="Example App"></LinkButton>
         </div>
         <div v-if="flavor && flavor.name !== 'blits'" class="w-11/12 md:col-span-2" v-html="codeblob">
             
