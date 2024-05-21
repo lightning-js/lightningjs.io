@@ -22,7 +22,7 @@ export default {
         <div v-if="features" v-for="feature in features " class="flex gap-6 items-center rounded-sm bg-zinc-50 dark:bg-slate-900 p-4">
           <div class="flex-col">
             <h2 class="text-2xl font-semibold">{{feature.title}}</h2>
-            <p>{{feature.description}}</p>
+            <p class="grow">{{feature.description}}</p>
           </div>
         </div>
      </div>
