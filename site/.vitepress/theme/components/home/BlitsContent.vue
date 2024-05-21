@@ -9,8 +9,8 @@ import LinkButton from './LinkButton.vue';
 const blits = {
     url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
     appUrl: 'https://blits-demo.lightningjs.io/#/',
-    title: 'Build your app',
-    description: `To accompany the Lightning Renderer we have developed a new TV UX framework.`,
+    title: 'TV App Framework',
+    description: `For Lightning 3 the Lighting Core Team has created a new TV App Framework optimized for the Lightning Renderer.`,
     points: [
         'Easy to read XML-style templating',
         'Built-in Reactivity',
@@ -28,23 +28,19 @@ const blits = {
 <template>
     <section class="flex flex-col items-center gap-8 w-11/12">
         <SectionHeader :title="blits.title" :description="blits.description"/>
-        <div class="flex flex-col gap-4 items-center">
-            <p class="italic">Introducing:</p>
-            <img class="stretch-0 w-48 hidden dark:block" :src="blits.darkLogo" alt="blits dark logo svg" />
-            <img class="stretch-0 w-48 dark:hidden" :src="blits.logo" alt="blits logo svg" />
-        </div>
-        <div class="grid grid-cols-1 place-items-center justify-center lg:grid-cols-3 gap-10 items-stretch">    
-            <div class="flex flex-col max-w-md w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-5">    
+            <div class="flex flex-col w-full p-4 h-full justify-center items-center md:items-start gap-4">
+                <img class="stretch-0 w-auto max-h-20 hidden dark:block" :src="blits.darkLogo" alt="framework logo" />
+                <img class="stretch-0 w-auto max-h-20 dark:hidden" :src="blits.logo" alt="framework logo" />
                 <p class="text-black dark:text-white mb-3">
-                    Blits is the App development Framework for Lightning, purpose-built by the Lightning Core team and optimized for Lightning 3.
-                    <br/><br/>Blits is easy and intuitive to work with. It’s a complete App framework for building high performing Lightning based TV apps, designed with a performance first mindset.
+                    Blits is easy and intuitive to work with. It’s a complete App framework for building high performing Lightning based TV apps, designed with the focus on performance.
                 </p>
-                <ul class="ml-5 list-disc list-outside">
+                <!-- <ul class="ml-5 list-disc list-outside">
                     <li v-for="p in blits.points">
                         {{ p }}
                     </li>
-                </ul>
-                <div class="flex justify-center place-items-center mt-10 space-x-3">
+                </ul> -->
+                <div class="flex justify-center place-items-center mt-6 space-x-3">
                     <LinkButton :href="blits.url" target="_blank" label="Learn more"></LinkButton>
                     <LinkButton :href="blits.appUrl" target="_blank" label="Example App"></LinkButton>
                 </div>

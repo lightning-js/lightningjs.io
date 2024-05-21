@@ -4,10 +4,10 @@ import LinkButton from './LinkButton.vue';
 
 <template>
     <div class="h-full mx-auto max-w-2xl pt-20 sm:pt-28 text-center">
-        <div class="px-3 py-4 text-2xl leading-6 text-gray-900 dark:text-gray-200">
+        <!-- <div class="px-3 py-4 text-2xl leading-6 text-gray-900 dark:text-gray-200">
             Lightningjs 3.0
-        </div>
-        <h1 class="dark:hidden text-4xl font-bold tracking-tight sm:text-7xl animate-fade-up">
+        </div> -->
+        <h1 class="mt-10 dark:hidden text-4xl font-bold tracking-tight sm:text-7xl animate-fade-up">
             More
             <span class="from-blue-400 via-purple-700 to-blue-800 bg-gradient-to-r bg-clip-text text-transparent">Performance</span>,
             Less

@@ -86,8 +86,8 @@ const home = {
   <main class="mx-auto max-w-screen-lg relative flex flex-col items-center gap-20">    
     <HeroDisplay class="mt-6"/>
     <LightingjsInfo class="mt-24"/>
-    <NewFeature :features="home.renderer.features"/>
     <BlitsContent/>
+    <NewFeature :features="home.renderer.features"/>
     <OtherFrameworks :frameworks="home.otherFrameworks"/>
     <!-- <FancyBackground class="rotate-180"/> -->
     <!-- <FlavorCollection title="Build your App" :description="home.flavors.description" :flavors="home.flavors.flavors"/> -->
