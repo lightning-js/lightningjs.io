@@ -51,9 +51,8 @@ export default defineConfig({
           {
             text: 'Lightning Ecosystem',
             items: [
-              { text: 'Blits App Framework', link: '/v3-docs/blits/getting_started/intro', target: '_blank' },
-              { text: 'Renderer API', link: '/api/renderer', target: '_blank' },
-              { text: 'Threadx API', link: '/api/threadx', target: '_blank' },
+              { text: 'Blits App Framework', link: '/v3-docs/blits/getting_started/intro' },
+              { text: 'Renderer API', link: '/api/renderer' }
             ]
           }
         ]
@@ -65,6 +64,9 @@ export default defineConfig({
     logo: {
       light: '/favicons/lng_grey.svg',
       dark: '/favicons/lng.svg',
+    },
+    search: {
+      provider: 'local'
     },
     sidebar: {
       ...sidebars

@@ -7,9 +7,8 @@ import discord_white from '../../../../assets/home/discord-mark-white.png'
 import discord_dark from '../../../../assets/home/discord-mark-dark.png'
 
 const dataFooters = [
-    { title: 'Renderer', url: 'https://github.com/lightning-js/renderer'},
-    { title: 'ThreadX', url: 'https://github.com/lightning-js/threadx'},
     { title: 'Blits App Framework', url:'https://lightning-js.github.io/blits/'},
+    { title: 'Renderer', url: 'https://github.com/lightning-js/renderer'},
 ]
 
 const dataLinks = [
@@ -34,4 +33,3 @@ const dataLinks = [
         </div>
     </section>
 </template>
-

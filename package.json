@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "docs:dev": "vitepress dev site",
-    "docs:build": "vitepress build site && node vpDocs.cjs",
+    "docs:build": "node vpDocs.cjs && vitepress build site",
     "docs:preview": "vitepress preview site"
   },
   "devDependencies": {

@@ -55,15 +55,6 @@ const home = {
     ],
   },
   otherFrameworks: [
-    // {
-    //   name: 'blits',
-    //   url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
-    //   appUrl: 'https://blits-demo.lightningjs.io/#/',
-    //   logo: img_blits,
-    //   darkLogo: img_blits_dark,
-    //   sampleCode: blits_code,
-    //   codeType: 'js'
-    // },
     {
       name: 'Solid',
       url: 'https://github.com/lightning-js/solid',
