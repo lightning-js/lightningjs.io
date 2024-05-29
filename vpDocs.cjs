@@ -37,7 +37,6 @@ async function getRemoteDocs(repo) {
     const targetPath = path.join(config.targetBasePath, repo.targetDir);
 
     try {
-
         console.info('Remove existing docs');
         await fs.remove(targetPath);
         await fs.remove(clonedRepoPath);
@@ -69,6 +68,7 @@ async function getRemoteDocs(repo) {
         
     } catch (e) {
         console.error('An exception occurred while getting docs from :' + repo.url);
+
         console.error(e);
         throw ('repoCloningFailed');
     }
