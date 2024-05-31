@@ -20,6 +20,7 @@ import sidebars from './sidebars.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   base: "/",
   title: "Lightningjs",
   description: "Lightningjs Nexus of Information",
@@ -43,11 +44,32 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Playground', link: 'https://playground.lightningjs.io', target: '_blank'},
       {
         text: 'Docs',
         items: [
-          { text: 'Blits', link: '/v3-docs/blits/getting_started/intro' },
-          { text: 'Solid', link: '/v3-docs/solid/getting_started' },
+          {
+            text: 'Lightning 3',
+            items: [
+              { text: 'Blits TV App Framework', link: '/v3-docs/blits/getting_started/intro' },
+              { text: 'Renderer API', link: '/api/renderer', target: '_blank' }
+            ]
+          },
+          {
+            text: 'Lightning 2',
+            items: [
+              { text: 'Lightning Core', link: '/docs/#/lightning-core-reference', target: '_blank' },
+              { text: 'Lightning SDK', link: '/docs/#/lightning-sdk-reference', target: '_blank' },
+              { text: 'Lightning CLI', link: '/docs/#/lightning-cli-reference', target: '_blank' },
+              { text: 'Lightning UI', link: '/docs/#/lightning-ui-reference', target: '_blank' },
+            ]
+          },
+          {
+            text: 'Other',
+            items: [
+              { text: 'L3 Third Party Integrations', link: '/other-integrations'}
+            ]
+          }
         ]
       },
       { text: 'News', link: '/blogs'}
@@ -58,13 +80,12 @@ export default defineConfig({
       light: '/favicons/lng_grey.svg',
       dark: '/favicons/lng.svg',
     },
-    // search: {
-    //   provider: 'local'
-    // },
+    search: {
+      provider: 'local'
+    },
     sidebar: {
       ...sidebars
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lightning-js' },
       { icon: 'discord', link: 'https://discord.com/invite/Mpj4HjHyh8' }
@@ -72,6 +93,6 @@ export default defineConfig({
   },
   vite: {
     base: "/",
-    publicDir: 'static'
+    publicDir: 'static',
   }
 })

@@ -5,7 +5,7 @@ import lightning_logo_grey_svg from '../../../../static/favicons/lng_grey.svg'
 </script>
 
 <template >
-    <div class="mx-auto max-w-2xl pt-14 md:pt-32">
+    <div class="mx-auto max-w-2xl">
         <section class="relative isolate overflow-hidden px-6 lg:px-8 ">
          <div class="mb-8 flex items-center justify-center gap-3">
             <span class="font-bold text-lg">Lightningjs</span>
