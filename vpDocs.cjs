@@ -77,8 +77,15 @@ async function getRemoteDocs(repo) {
 async function buildDocs() {
     try {
         console.info('Starting building the documentation');
-        await Promise.all(config.repos.map(repo => getRemoteDocs(repo)));
+        const docs = await Promise.all(config.repos.map(repo => getRemoteDocs(repo)));
+        const sidebar = {};
+        docs.forEach((doc) => {
+            sidebar[`${doc.prefix}`] = doc.sidebar;
+        });
 
+        const p = path.join(process.cwd(), 'site', '.vitepress', 'sidebars.json');
+
+        await fs.writeFile(p, JSON.stringify(sidebar));
     } catch (e) {
         console.error(e);
         throw('documentBuildFailed');
