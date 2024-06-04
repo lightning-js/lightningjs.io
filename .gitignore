@@ -10,6 +10,5 @@ site/.vitepress/cache
 site/.vitepress/cache/
 site/.vitepress/dist
 site/.vitepress/dist/
-site/v3-docs/
 site/docs/
 public
