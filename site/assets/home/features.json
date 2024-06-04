@@ -5,7 +5,7 @@
     },
     {
         "title": "Effects",
-        "description": "Lightning comes with a wide variety of effects to create a photoshop like view of your content."
+        "description": "Lightning comes with a wide variety of effects to create a rich user experience of your content."
     },
     {
         "title": "Multiplatform support",
@@ -13,7 +13,7 @@
     },
     {
         "title": "Advanced Font Rendering",
-        "description": "Crystal sharp fonts across any resolution or size for a best in class viewing experience"   
+        "description": "Crystal sharp fonts across any resolution or size for a best in class viewing experience."   
     },
     {
         "title":  "Sprite sheet support",
@@ -21,10 +21,30 @@
     },
     {
         "title": "Accessibility",
-        "description": "Support for color shifts, announcer and magnification for ease of access of your UI content"
+        "description": "Support for color shifts, announcer and magnification for ease of access of your UI content."
     },
     {
-        "title": "Multithreading",
-        "description": "Faster processing by rendering on a dedicated rendering thread."
+        "title": "Clear syntax",
+        "description": "Easy to read XML-style templating combined with JavaScript."
+    },
+    {
+        "title": "Reactivity",
+        "description": "Reactively update your component template with minimal code."
+    },
+    {
+        "title": "Input handling",
+        "description": "Control your App with configurable input keys."
+    },
+    {
+        "title": "Focus management",
+        "description": "Allow components to react to focus events"
+    },
+    {
+        "title": "Routing",
+        "description": "Memory efficient page routing."
+    },
+    {
+        "title": "Reusable components",
+        "description": "Create a component once and use it anywhere in your App."
     }
 ]

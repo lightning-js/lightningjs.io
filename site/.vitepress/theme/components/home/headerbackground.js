@@ -162,7 +162,7 @@ export function init(target) {
 	// Motion mode
 	//if (Modernizr && Modernizr.deviceorientation) {
 	if ('ontouchstart' in document.documentElement && window.DeviceOrientationEvent) {
-		console.log('Using device orientation');
+		// console.log('Using device orientation');
 		window.addEventListener('deviceorientation', function(e) {
 			mouse.x = (canvas.clientWidth / 2) - ((e.gamma / 90) * (canvas.clientWidth / 2) * 2);
 			mouse.y = (canvas.clientHeight / 2) - ((e.beta / 90) * (canvas.clientHeight / 2) * 2);
@@ -172,7 +172,7 @@ export function init(target) {
 	}
 	else {
 		// Mouse move listener
-		console.log('Using mouse movement');
+		// console.log('Using mouse movement');
 		document.body.addEventListener('mousemove', function(e) {
 			//console.log('moved');
 			mouse.x = e.clientX;
