@@ -58,10 +58,10 @@ export default defineConfig({
           {
             text: 'Lightning 2',
             items: [
-              { text: 'Lightning Core', link: '/docs/#/lightning-core-reference', target: '_blank' },
-              { text: 'Lightning SDK', link: '/docs/#/lightning-sdk-reference', target: '_blank' },
-              { text: 'Lightning CLI', link: '/docs/#/lightning-cli-reference', target: '_blank' },
-              { text: 'Lightning UI', link: '/docs/#/lightning-ui-reference', target: '_blank' },
+              { text: 'Lightning Core', link: '/docs/#/lightning-core-reference/index', target: '_blank' },
+              { text: 'Lightning SDK', link: '/docs/#/lightning-sdk-reference/index', target: '_blank' },
+              { text: 'Lightning CLI', link: '/docs/#/lightning-cli-reference/index', target: '_blank' },
+              { text: 'Lightning UI', link: '/docs/#/lightning-ui-reference/index', target: '_blank' },
             ]
           },
           {
