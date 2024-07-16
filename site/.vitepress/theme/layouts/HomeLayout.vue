@@ -7,6 +7,8 @@ import Footer from '../components/home/Footer.vue'
 import JoinDiscord from '../components/home/JoinDiscord.vue'
 import LegacyBlock from '../components/home/LegacyBlock.vue'
 import BlitsContent from '../components/home/BlitsContent.vue'
+import AnnouncementBar  from '../components/home/AnnouncementBar.vue'
+
 
 </script>
 <template>
@@ -15,6 +17,7 @@ import BlitsContent from '../components/home/BlitsContent.vue'
     <HeroDisplay class="mt-6"/>
     <LightingjsInfo class="mt-24"/>
     <BlitsContent/>
+    <AnnouncementBar/>
     <NewFeature/>
     <Quote/>
     <LegacyBlock/>
