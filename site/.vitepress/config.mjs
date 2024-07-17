@@ -72,7 +72,8 @@ export default defineConfig({
           }
         ]
       },
-      { text: 'News', link: '/blogs'}
+      { text: 'News', link: '/blogs'},
+      { text: 'Forum', link: 'https://forum.lightningjs.io/'}
       // { text: 'Examples', link: '/examples/markdown-examples' }
     ],
     siteTitle: 'Lightningjs',
