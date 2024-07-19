@@ -27,14 +27,14 @@ From an App perspective these are new Blits features you can use:
 * FPS Counter component [PR35](https://github.com/lightning-js/blits/pull/35)
 * Automatic MSDF font generation [PR71](https://github.com/lightning-js/blits/pull/71)
 * TypeScript support [PR86](https://github.com/lightning-js/blits/pull/86)
-* Prec-ompilation support [PR37](https://github.com/lightning-js/blits/pull/37)
+* Pre-compilation support [PR37](https://github.com/lightning-js/blits/pull/37)
 * Watcher functionality [9a11](https://github.com/lightning-js/blits/commit/9a118814df54ee568f464decfd4d9f1b5210fce5)
 * Support for percentages in dimensions and positioning [8bfed86](https://github.com/lightning-js/blits/commit/8bfed86f7bb3d76362fb728aea49a2b2d55eb863)
 * Support for `@loaded` / `@error` events on Elements [34ad823](https://github.com/lightning-js/blits/commit/34ad823afe2a6a8363c1d6288d374453e5c64adc)
 * Support for Slots [a7de99](https://github.com/lightning-js/blits/commit/a7de9998e2b04ac28f1ccd6b1de40f27b32c8ef8)
 * Text to speech plugin [99af701](https://github.com/lightning-js/blits/commit/99af701edf3160aad75191b1fe86d133f444ac0e)
 * Support for custom key mapping [39dcf2](https://github.com/lightning-js/blits/commit/39dcf276b3cc827a4edf2edf4a89821fd949db2d)
-- Support for dynamic components via `is`-attribute [0dc56c](https://github.com/lightning-js/blits/commit/0dc56c181860563eb3544e930c1cb3b0d7a950a6)
+* Support for dynamic components via `is`-attribute [0dc56c](https://github.com/lightning-js/blits/commit/0dc56c181860563eb3544e930c1cb3b0d7a950a6)
 
 
 ...including loads of changes to the VSCode extension! Check that out [here](https://marketplace.visualstudio.com/items?itemName=LightningJS.lightning-blits)
@@ -50,9 +50,9 @@ Ofcourse that's just the App Framework section of it, the Renderer got to see a 
 * Texture Compression, this allows support for compressed .ktx textures using ETC1 or ETC2 compression algorithms: [PR143](https://github.com/lightning-js/renderer/pull/143)
 * An inspector for debugging, this will clone the active render tree in the DOM for easy inspection using devtools: [PR167](https://github.com/lightning-js/renderer/pull/167)
 
-Howevere those are just a snippit from all the features that went in! And there where a ton of performance upgrades that boosted the FPS >50 on most devices, reduced JSHEAP memory usage, improved GFX memory management and creation/delete timing:
+However this is just a snippet of all the features that went in! And there where a ton of performance upgrades that boosted the FPS >50 on most devices, reduced JSHEAP memory usage, improved GFX memory management and creation/delete timing:
 
-* Pauze RAF when idle to prevent overloading the requestAnimationFrame handler when idle [PR99](https://github.com/lightning-js/renderer/pull/99)
+* Pause RAF when idle to prevent overloading the requestAnimationFrame handler [PR99](https://github.com/lightning-js/renderer/pull/99)
 * Dependency Graph driven updates to do more granular CoreNode updates [PR103](https://github.com/lightning-js/renderer/pull/103)
 * Rendering performance optimizations to enhance the overall FPS [PR91](https://github.com/lightning-js/renderer/pull/91), [PR112](https://github.com/lightning-js/renderer/pull/112), [PR249](https://github.com/lightning-js/renderer/pull/249)
 * Visual Regression Tests that allows Lightning 3 to quick fast iterations and maintain control over the changes coming in [PR92](https://github.com/lightning-js/renderer/pull/92)
