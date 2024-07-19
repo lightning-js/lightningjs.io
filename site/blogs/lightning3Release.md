@@ -39,7 +39,7 @@ From an App perspective these are new Blits features you can use:
 
 ...including loads of changes to the VSCode extension! Check that out [here](https://marketplace.visualstudio.com/items?itemName=LightningJS.lightning-blits)
 
-Ofcourse that's just the App Framework section of it, the Renderer got to see a lot of changes. As its the heart of Lightning 3, there's simply too much to list all together. But these are some highlights:
+Of course that's just the App Framework section of it, the Renderer got to see a lot of changes. As its the heart of Lightning 3, there's simply too much to list all together. But these are some highlights:
 
 * Bounds Margin, the ability to only render whats visible on screen. See [PR191](https://github.com/lightning-js/renderer/pull/191)
 * Render To Texture, the ability to collapse part of the render tree to a single texture. See [PR186](https://github.com/lightning-js/renderer/pull/186)
