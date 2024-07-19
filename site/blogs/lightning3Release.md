@@ -27,8 +27,15 @@ From an App perspective these are new Blits features you can use:
 * FPS Counter component [PR35](https://github.com/lightning-js/blits/pull/35)
 * Automatic MSDF font generation [PR71](https://github.com/lightning-js/blits/pull/71)
 * TypeScript support [PR86](https://github.com/lightning-js/blits/pull/86)
-* Precompilation support [PR37](https://github.com/lightning-js/blits/pull/37)
+* Prec-ompilation support [PR37](https://github.com/lightning-js/blits/pull/37)
 * Watcher functionality [9a11](https://github.com/lightning-js/blits/commit/9a118814df54ee568f464decfd4d9f1b5210fce5)
+* Support for percentages in dimensions and positioning [8bfed86](https://github.com/lightning-js/blits/commit/8bfed86f7bb3d76362fb728aea49a2b2d55eb863)
+* Support for `@loaded` / `@error` events on Elements [34ad823](https://github.com/lightning-js/blits/commit/34ad823afe2a6a8363c1d6288d374453e5c64adc)
+* Support for Slots [a7de99](https://github.com/lightning-js/blits/commit/a7de9998e2b04ac28f1ccd6b1de40f27b32c8ef8)
+* Text to speech plugin [99af701](https://github.com/lightning-js/blits/commit/99af701edf3160aad75191b1fe86d133f444ac0e)
+* Support for custom key mapping [39dcf2](https://github.com/lightning-js/blits/commit/39dcf276b3cc827a4edf2edf4a89821fd949db2d)
+- Support for dynamic components via `is`-attribute [0dc56c](https://github.com/lightning-js/blits/commit/0dc56c181860563eb3544e930c1cb3b0d7a950a6)
+
 
 ...including loads of changes to the VSCode extension! Check that out [here](https://marketplace.visualstudio.com/items?itemName=LightningJS.lightning-blits)
 
