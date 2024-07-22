@@ -13,7 +13,7 @@ After being in Beta for a while, we're super proud to announce that Lightning 3.
 
 It's been a tremendous journey and we couldn't have done it without such a great community, from bug hunters, people testing this on exotic devices to really cool contributions. Thanks everyone that is involved! We can't wait to see what apps will emerge, either new or transitioning from Lightning 2 to 3. 
 
-<!-- Plaatje van de blits demo app op een device? -->
+<a href="https://blits-demo.lightningjs.io/#/demos/tmdb"><img src="/assets/lightning3release/blits_tmdb.png" class="rounded-lg w-full" /></a>
 
 To get started with Lightning 3 you can also have a demo [here](https://blits-demo.lightningjs.io/) or the [source](https://github.com/lightning-js/blits-example-app) of the demo.
 
@@ -60,6 +60,10 @@ However this is just a snippet of all the features that went in! And there where
 * Memory Management to ensure proper Texture Graphics memory management PRs: [PR211](https://github.com/lightning-js/renderer/pull/211), [PR301](https://github.com/lightning-js/renderer/pull/301), [PR27](https://github.com/lightning-js/renderer/pull/27)
 * Canvas2D font rendering performance PRs to rival Lightning 2's Canvas Font rendering: [PR319](https://github.com/lightning-js/renderer/pull/319)
 * And lots of SDF font rendering updates to ensure mature font rendering: [PR257](https://github.com/lightning-js/renderer/pull/257), [PR185](https://github.com/lightning-js/renderer/pull/185), [PR213](https://github.com/lightning-js/renderer/pull/213), [PR136](https://github.com/lightning-js/renderer/pull/136)
+
+To validate performance we've created a [Benchmark](https://github.com/lightning-js/benchmark) to measure consistent differences between releases and changes on the Renderer. This is along side various FPS benchmark tools like [this](https://blits-demo.lightningjs.io/#/benchmarks/exponential).
+
+<a href="https://github.com/lightning-js/benchmark"><img src="/assets/lightning3release/benchmark.png" class="rounded-lg w-full" /></a>
 
 Just to list a few big changes, all-in-all it's been a very busy year and we're very proud to announce Lightning 3.0 is here!
 If you like to get started you can find a getting started guide [here](https://lightningjs.io/v3-docs/blits/getting_started/getting_started.html).
