@@ -6,8 +6,8 @@ date: 2024-7-18
 author: Wouter-lucas van Boesschoten
 ---
 
-<!-- <img src="/assets/yveIneedaLightning3banner.jpg" class="rounded-lg w-full" /> -->
-<!-- plaatje met Beta doorgestreept?? -->
+<img src="/assets/blogs/ligtning3-banner.png" class="rounded-lg w-full" />
+
 
 After being in Beta for a while, we're super proud to announce that Lightning 3.0 has been officially released! You can find the official latest releases [here](https://github.com/lightning-js/renderer/releases/tag/v1.0.0) and [here](https://github.com/lightning-js/blits/releases/tag/v1.0.0)
 
