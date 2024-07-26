@@ -9,7 +9,7 @@ import discord_dark from '../../../../assets/home/discord-mark-dark.png'
 const dataFooters = [
     { title: 'Blits TV App Framework', url:'/v3-docs/blits/getting_started/intro'},
     { title: 'Renderer', url: 'https://github.com/lightning-js/renderer'},
-    { title: 'Third Party Integrations', url: '/other-frameworks'}
+    { title: 'Third Party Integrations', url: '/other-integrations'}
 ]
 
 const dataLinks = [
