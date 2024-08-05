@@ -9,7 +9,7 @@ const config = {
     repos: [
         {
             url: 'https://github.com/lightning-js/blits',
-            branch: 'vitepress',
+            branch: 'master',
             sourceDir: 'docs',
             targetDir: 'blits',
             landing: 'getting_started/intro',
