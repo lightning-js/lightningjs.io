@@ -34,7 +34,7 @@ export default defineConfig({
   transformPageData: (pageData) => {
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
     const {title: fmTitle, description: fmDesc} = pageData.frontmatter;
-    const {title: pTitle, description: pDesc, filePath} = pageData;
+    const {title: pTitle, description: pDesc, relativePath} = pageData;
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
 
@@ -44,7 +44,7 @@ export default defineConfig({
       pageData.frontmatter.head.push(['meta', {name: 'og:image', content: pageData.frontmatter.linkImage || '/favicons/lng_1200x630.jpg'}])
     }
     else if(pTitle && pTitle.length > 0) {
-      const extra = ' | ' + (filePath.indexOf('blits') > -1 ? 'Blits' : 'LightningJS') 
+      const extra = ' | ' + (relativePath.indexOf('blits') > -1 ? 'Blits' : 'LightningJS')
       pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pTitle + extra}])
       pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pDesc}])
       pageData.frontmatter.head.push(['meta', {name: 'og:image', content: '/favicons/lng_1200x630.jpg'}])
