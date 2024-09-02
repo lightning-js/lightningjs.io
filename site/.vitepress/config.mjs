@@ -33,12 +33,27 @@ export default defineConfig({
 
   transformPageData: (pageData) => {
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
-    const {title, description} = pageData.frontmatter;
+    const {title: fmTitle, description: fmDesc} = pageData.frontmatter;
+    const {title: pTitle, description: pDesc, relativePath} = pageData;
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pageData.frontmatter.layout === 'home2' ? 'Lightningjs' : `${title} | Lightningjs`}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pageData.frontmatter.layout === 'home2' ? 'Nexus of Information' : description}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: pageData.frontmatter.linkImage || '/favicons/lng_1200x630.jpg'}])
+
+    if(fmTitle) {
+      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: fmTitle + ' | LightningJS'}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: fmDesc}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: pageData.frontmatter.linkImage || '/favicons/lng_1200x630.jpg'}])
+    }
+    else if(pTitle && pTitle.length > 0) {
+      const extra = ' | ' + (relativePath.indexOf('blits') > -1 ? 'Blits' : 'LightningJS')
+      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pTitle + extra}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pDesc}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: '/favicons/lng_1200x630.jpg'}])
+    }
+    else {
+      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: 'Lightningjs'}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: 'Nexus of Information'}])
+      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: '/favicons/lng_1200x630.jpg'}])
+    }
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
