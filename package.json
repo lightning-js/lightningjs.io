@@ -32,7 +32,7 @@
     "@orama/plugin-vitepress": "^2.0.16",
     "delaunay-fast": "^1.0.1",
     "pagefind": "^1.1.0",
-    "shiki-es": "^0.14.0",
+    "shiki": "^1.16.1",
     "vitepress-plugin-pagefind": "^0.2.14"
   }
 }

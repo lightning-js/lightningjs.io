@@ -1,0 +1,20 @@
+<template>
+    <Element w="1920" h="1080" color="#000">
+        <Text :content="$title"/>
+    </Element>
+</template>
+
+<script> 
+export default Blits.Application({
+    state() {
+        return {
+            title: 'Blits!'
+        }
+    },
+    input: {
+        enter() {
+            this.title = 'Blits! is! awesome!'
+        }
+    }
+})
+</script>
