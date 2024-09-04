@@ -1,11 +1,14 @@
 <script setup>
 import SectionHeader from './SectionHeader.vue';
-import BlitsSample from './BlitsSample.vue';
 import img_blits from '../../../../assets/home/blits-logo.png'
 import img_blits_dark from '../../../../assets/home/blits-logo-white.png'
-import blits_code from '../../../../assets/home/blits.js?raw'
+// import blits_code from '../../../../assets/home/blits.js?raw'
+import blits_code from '../../../../assets/home/App.blits?raw'
 import LinkButton from './LinkButton.vue';
+import { onMounted, ref } from 'vue';
 
+import blitsSyntax from '../../syntax/blits.json'
+import { createHighlighter } from 'shiki';
 const blits = {
     url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
     appUrl: 'https://blits-demo.lightningjs.io/#/',
@@ -23,6 +26,22 @@ const blits = {
     darkLogo: img_blits_dark,
     code: blits_code,
 }
+
+const codeBlob = ref('<div></div>')
+onMounted(async () => {
+    const hl = await createHighlighter({
+        themes: ['one-dark-pro'],
+        langs: [blitsSyntax],
+        langAlias: {
+            'blits': 'Blits'
+        }
+    });
+
+    codeBlob.value = hl.codeToHtml(blits_code, {
+        lang: 'blits',
+        theme: 'one-dark-pro'
+    })
+})
 </script>
 
 <template>
@@ -46,7 +65,7 @@ const blits = {
                 </div>
             </div>
             <div class="lg:col-span-2 flex items-center justify-center w-full">
-                <BlitsSample class="w-full"/>
+                <div class="w-full" v-html="codeBlob"></div>
             </div>
         </div>
     </section>

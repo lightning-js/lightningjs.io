@@ -17,6 +17,7 @@
 
 import { defineConfig } from 'vitepress'
 import sidebars from './sidebars.json'
+import blits from './theme/syntax/blits.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -30,7 +31,13 @@ export default defineConfig({
     ['link', { rel: "icon", sizes: "16x16", type: "image/png", href: '/favicons/lng_16x16.png'}],
     ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: '/favicons/lng_32x32.png'}]
   ],
-
+  markdown: {
+    languages: [blits],
+    languageAlias: {
+      'blits': 'Blits',
+      'blt': 'Blits'
+    }
+  },
   transformPageData: (pageData) => {
     const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
     const {title: fmTitle, description: fmDesc} = pageData.frontmatter;
