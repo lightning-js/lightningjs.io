@@ -8,7 +8,7 @@ import LinkButton from './LinkButton.vue';
 import { onMounted, ref } from 'vue';
 
 import blitsSyntax from '../../syntax/blits.json'
-import { createHighlighter } from 'shiki';
+import {bundledLanguages, createHighlighter } from 'shiki';
 const blits = {
     url: 'https://lightningjs.io/v3-docs/blits/getting_started/intro.html',
     appUrl: 'https://blits-demo.lightningjs.io/#/',
@@ -31,7 +31,7 @@ const codeBlob = ref('<div></div>')
 onMounted(async () => {
     const hl = await createHighlighter({
         themes: ['one-dark-pro'],
-        langs: [blitsSyntax],
+        langs: ['js', 'ts', blitsSyntax],
         langAlias: {
             'blits': 'Blits'
         }
