@@ -17,9 +17,15 @@
 
  <script setup>
 import ComponentBlock from '../components/blits/ComponentBlock.vue';
-import BlogCard from '../components/BlogCard.vue';
 import LinkButton from '../components/home/LinkButton.vue';
-import {data as blogs} from '../index.data.js';
+
+import buttonPNG from '../../../assets/blits-components/button.png'
+import checkboxPNG from '../../../assets/blits-components/checkbox.png'
+import gridPNG from '../../../assets/blits-components/grid.png'
+import inputPNG from '../../../assets/blits-components/input.png'
+import listPNG from '../../../assets/blits-components/list.png'
+import progressbarPNG from '../../../assets/blits-components/progressbar.png'
+import togglePNG from '../../../assets/blits-components/toggle.png'
 
 const gitPrefix = 'https://github.com/lightning-js/blits-components/blob/main/src/components/'
 
@@ -28,43 +34,45 @@ const page = {
     components: [
         {
             name: 'Button',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Button.js'
-        },
-        {
-            name: 'Checkbox',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Checkbox.js'
-        },
-        {
-            name: 'Grid',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Grid.js'
-        },
-        {
-            name: 'Input',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Input.js'
-        },
-        {
-            name: 'Item',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Item.js'
+            description: 'Every App need a button this simple button allows you to align text to the left, center, or right.',
+            url: gitPrefix + 'Button.js',
+            exampleImg: buttonPNG
         },
         {
             name: 'List',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'List.js'
+            description: 'Lists are used for multiple targets, think rails of videos, a menu bar with categories. This example includes focus handling and scrolling when the list is too long',
+            url: gitPrefix + 'List.js',
+            exampleImg: listPNG
         },
         {
-            name: 'ProgressBar',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'ProgressBar.js'
+            name: 'Grid',
+            description: 'Grids are also a common occurance, they give a bit of a better overview compared to Lists. This example has built in focus handling',
+            url: gitPrefix + 'Grid.js',
+            exampleImg: gridPNG
+        },
+        {
+            name: 'Checkbox',
+            description: 'The checkbox is handy for settings, or login pages. This component gives you a nice base to start creating your own.',
+            url: gitPrefix + 'Checkbox.js',
+            exampleImg: checkboxPNG
+        },
+        {
+            name: 'Input',
+            description: 'The input component is handy for when you need to create a search view, or sign in page. The component also supports masked input mode in case you need to shield passwords',
+            url: gitPrefix + 'Input.js',
+            exampleImg: inputPNG
+        },
+        {
+            name: 'Progress Bar',
+            description: 'Progress Bar are simple way to show the progress of something, on T.V. Apps these can be used for video players',
+            url: gitPrefix + 'ProgressBar.js',
+            exampleImg: progressbarPNG
         },
         {
             name: 'Toggle',
-            descript: 'This awesome component!',
-            url: gitPrefix + 'Toggle.js'
+            description: 'The toggle is similar to the checkbox component, but slightly different in looks',
+            url: gitPrefix + 'Toggle.js',
+            exampleImg: togglePNG
         }
     ]
 }
