@@ -24,7 +24,7 @@ import BlogLayout from './layouts/BlogLayout.vue';
 import BlogsLayout from './layouts/BlogsLayout.vue';
 import HomeLayout from './layouts/HomeLayout.vue';
 import L2Layout from './layouts/L2Layout.vue';
-import BlitsComponentLayout from './layouts/BlitsComponentLayout.vue';
+import BlitsComponentsLayout from './layouts/BlitsComponentsLayout.vue';
 
 import FancyBackground from './components/home/FancyBackground.vue';
 import L3Integrations from './layouts/L3Integrations.vue';
@@ -37,7 +37,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.component('blits-component', BlitsComponentLayout)
+    app.component('blits-components', BlitsComponentsLayout)
     app.component('blog', BlogLayout)
     app.component('blogs', BlogsLayout)
     app.component('home2', HomeLayout)

@@ -16,26 +16,91 @@
  */
 
  <script setup>
-
+import ComponentBlock from '../components/blits/ComponentBlock.vue';
 import BlogCard from '../components/BlogCard.vue';
+import LinkButton from '../components/home/LinkButton.vue';
 import {data as blogs} from '../index.data.js';
+
+const gitPrefix = 'https://github.com/lightning-js/blits-components/blob/main/src/components/'
+
+const page = {
+    title: 'Blits Components',
+    components: [
+        {
+            name: 'Button',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Button.js'
+        },
+        {
+            name: 'Checkbox',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Checkbox.js'
+        },
+        {
+            name: 'Grid',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Grid.js'
+        },
+        {
+            name: 'Input',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Input.js'
+        },
+        {
+            name: 'Item',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Item.js'
+        },
+        {
+            name: 'List',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'List.js'
+        },
+        {
+            name: 'ProgressBar',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'ProgressBar.js'
+        },
+        {
+            name: 'Toggle',
+            descript: 'This awesome component!',
+            url: gitPrefix + 'Toggle.js'
+        }
+    ]
+}
 
 </script>
 <template>
     <div class="mx-auto max-w-screen-lg flex flex-col items-center">
-        <div class="text-center max-w-2xl pt-20 sm:pt-28">
-            <h1 class="dark:hidden text-4xl font-bold tracking-tight sm:text-7xl animate-fade-up">
-                Read
-                <span class="from-blue-400 via-purple-700 to-blue-800 bg-gradient-to-r bg-clip-text text-transparent">Blogs</span>,
-                <br>
-                And
-                <span class="from-blue-400 via-purple-700 to-blue-800 bg-gradient-to-r bg-clip-text text-transparent">Articles</span>
-            </h1>
-            <h1 class="hidden dark:block text-4xl font-bold tracking-tight sm:text-7xl from-blue-200 via-purple-700 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent animate-fade-up">Read Blogs, <br> And Articles</h1>
-            <p class="mt-6 text-lg leading-8 text-black dark:text-gray-200"></p>
+        <div class="h-full mx-auto max-w-2xl pt-20 sm:pt-28 text-center flex flex-col gap-6">
+            <h1 class="
+                mt-10
+                shrink-0
+                text-4xl md:hidden
+                font-bold  
+                from-blue-400 via-purple-700 to-blue-800
+                dark:from-blue-200 dark:via-purple-700 dark:to-blue-600
+                bg-gradient-to-r
+                bg-clip-text
+                text-transparent
+                leading-tight">{{page.title}}</h1>
+            <h1 class="
+                mt-10
+                shrink-0
+                hidden md:block
+                text-7xl
+                font-bold  
+                from-blue-400 via-purple-700 to-blue-800
+                dark:from-blue-200 dark:via-purple-700 dark:to-blue-600
+                bg-gradient-to-r
+                bg-clip-text
+                text-transparent
+                leading-tight">{{page.title}}</h1>
+            <p class="text-lg leading-8 text-black dark:text-gray-200">Besides <a class="text-indigo-600" href="/v3-docs/blits/getting-started/intro" >Blits</a>, our own TV App Framework, you can hook up the Lightning 3 Renderer to a framework of your choice. Checkout the Renderer API to develop your own integration.</p>
+            <LinkButton label="Github" href="/api/renderer" target="_blank"/>
         </div>
-        <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3">
-            <BlogCard v-for="blog in blogs" :blog="blog" />
+        <div class="flex flex-col items-center gap-8 mt-8 w-11/12">
+            <ComponentBlock v-for="(item, index) in page.components" :item="item" :index="index" />
         </div>
     </div>
 </template>
