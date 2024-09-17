@@ -34,46 +34,47 @@ const page = {
     components: [
         {
             name: 'Button',
-            description: 'Every App need a button this simple button allows you to align text to the left, center, or right.',
+            description: '<i>Need a button in your App?</i><br />This reference button supports text alignment and changes background color upon focus. Attach an action on `enter`-click and your are good to go.',
             url: gitPrefix + 'Button.js',
             exampleImg: buttonPNG
         },
         {
             name: 'List',
-            description: 'Lists are used for multiple targets, think rails of videos, a menu bar with categories. This example includes focus handling and scrolling when the list is too long',
+            description: '<i>More content than fits your App?</i><br />This component allows you to scroll through a list of items, and comes with the option to enable continuous scrolling.',
             url: gitPrefix + 'List.js',
             exampleImg: listPNG
         },
         {
             name: 'Grid',
-            description: 'Grids are also a common occurance, they give a bit of a better overview compared to Lists. This example has built in focus handling',
+            description: '<i>Display your content in a grid</i><br />Grids are designed to give a good overview of all available content. This reference component has all the functionality to navigate through the grid built in.',
             url: gitPrefix + 'Grid.js',
             exampleImg: gridPNG
         },
-        {
-            name: 'Checkbox',
-            description: 'The checkbox is handy for settings, or login pages. This component gives you a nice base to start creating your own.',
-            url: gitPrefix + 'Checkbox.js',
-            exampleImg: checkboxPNG
-        },
+        
         {
             name: 'Input',
-            description: 'The input component is handy for when you need to create a search view, or sign in page. The component also supports masked input mode in case you need to shield passwords',
+            description: '<i>Capture information from your users?</i><br />The input component is handy for when you need to create a search view, or sign in page. This component also supports masked input mode in case you need to shield passwords',
             url: gitPrefix + 'Input.js',
             exampleImg: inputPNG
         },
         {
-            name: 'Progress Bar',
-            description: 'Progress Bar are simple way to show the progress of something, on T.V. Apps these can be used for video players',
-            url: gitPrefix + 'ProgressBar.js',
-            exampleImg: progressbarPNG
+            name: 'Checkbox',
+            description: '<i>Yes or no?</i><br />The checkbox component is handy for settings and login pages. This component gives you a nice basis to build your own forms.',
+            url: gitPrefix + 'Checkbox.js',
+            exampleImg: checkboxPNG
         },
         {
             name: 'Toggle',
-            description: 'The toggle is similar to the checkbox component, but slightly different in looks',
+            description: '<i>On or off</i><br />The toggle component is similar to the checkbox component. It\'s a visually appealing way turn on or off an item in a settings view, for example.',
             url: gitPrefix + 'Toggle.js',
             exampleImg: togglePNG
-        }
+        },
+        {
+            name: 'Progress Bar',
+            description: '<i>Are we there yet?</i><br />Progress Bars are a visual way to show the progress of something - great to use on loading screens, or in a video player view.',
+            url: gitPrefix + 'ProgressBar.js',
+            exampleImg: progressbarPNG
+        }, 
     ]
 }
 
@@ -104,8 +105,25 @@ const page = {
                 bg-clip-text
                 text-transparent
                 leading-tight">{{page.title}}</h1>
-            <p class="text-lg leading-8 text-black dark:text-gray-200">Besides <a class="text-indigo-600" href="/v3-docs/blits/getting-started/intro" >Blits</a>, our own TV App Framework, you can hook up the Lightning 3 Renderer to a framework of your choice. Checkout the Renderer API to develop your own integration.</p>
-            <LinkButton label="Github" href="/api/renderer" target="_blank"/>
+            <p class="text-lg leading-8 text-black dark:text-gray-200">
+                Blits Components are a set of <b>off-the-shelf</b> components. Basic and performant
+                reference components, that you can use freely in your next Lightning 3 Blits App.
+            </p>
+            <p class="text-lg leading-8 text-black dark:text-gray-200">
+                Unlike a traditional UI components library, the Blits components are not installable from NPM.
+                We're providing the Blits Components as references, intended to be <b>copied and pasted</b> into your
+                App, where you can <b>adapt and customize</b> them further to your App's needs.
+            </p>
+            <p class="text-lg leading-8 text-black dark:text-gray-200">
+                Of course, we're all for code reuse. But no App is (or should be) the same. Using the exact same UI
+                component for different Apps is a challenge. Trying to tailor a single component for many use cases, often
+                just leads to bloated components, with features and functionality that you may not need -
+                <i>so why would you import and execute that extra code in your App?</i>
+            </p>
+            <p class="text-lg leading-8 text-black dark:text-gray-200">
+                The Blits Components come with little design, and basic functionality. To give you a quick start with your project.
+            </p>
+            <LinkButton label="Blits Components on Github" href="https://github.com/lightning-js/blits-components" target="_blank"/>
         </div>
         <div class="flex flex-col items-center gap-8 mt-8 w-11/12">
             <ComponentBlock v-for="(item, index) in page.components" :item="item" :index="index" />
