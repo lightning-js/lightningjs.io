@@ -80,7 +80,7 @@ const page = {
 
 </script>
 <template>
-    <div class="mx-auto max-w-screen-lg flex flex-col items-center">
+    <div class="mx-auto max-w-screen-lg flex flex-col items-center pb-20">
         <div class="h-full mx-auto max-w-2xl pt-20 sm:pt-28 text-center flex flex-col gap-6">
             <h1 class="
                 mt-10
@@ -125,7 +125,7 @@ const page = {
             </p>
             <LinkButton label="Blits Components on Github" href="https://github.com/lightning-js/blits-components" target="_blank"/>
         </div>
-        <div class="flex flex-col items-center gap-8 mt-8 w-11/12">
+        <div class="flex flex-col items-center gap-16 mt-12 w-11/12">
             <ComponentBlock v-for="(item, index) in page.components" :item="item" :index="index" />
         </div>
     </div>

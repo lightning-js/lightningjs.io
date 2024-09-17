@@ -29,7 +29,7 @@ const props = defineProps(['item', 'index'])
             <p class="text-black dark:text-white mb-3" v-html="props.item.description"></p>
             <LinkButton class="pt-3" :href="props.item.url" label="Source"></LinkButton>
         </div>
-        <div class="flex flex-col gap-2 rounded-sm bg-zinc-50 dark:bg-slate-900 w-11/12 md:col-span-2 h-full">
+        <div class="flex flex-col justify-center gap-2 rounded-sm bg-zinc-50 dark:bg-slate-900 w-11/12 md:col-span-2 h-full">
             <img :src="props.item.exampleImg"/>
         </div>
     </div>
