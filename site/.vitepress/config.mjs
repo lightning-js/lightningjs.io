@@ -67,6 +67,7 @@ export default defineConfig({
             text: 'Lightning 3',
             items: [
               { text: 'Blits TV App Framework', link: '/v3-docs/blits/getting_started/intro' },
+              { text: 'Blits Components', link: '/blits-components' },
               { text: 'Renderer API', link: '/api/renderer', target: '_blank' }
             ]
           },

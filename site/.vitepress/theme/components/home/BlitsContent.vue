@@ -32,7 +32,7 @@ const blits = {
             <div class="flex flex-col w-full p-4 h-full justify-center items-center md:items-start gap-4">
                 <img class="stretch-0 w-auto max-h-20 hidden dark:block" :src="blits.darkLogo" alt="framework logo" />
                 <img class="stretch-0 w-auto max-h-20 dark:hidden" :src="blits.logo" alt="framework logo" />
-                <p class="text-black dark:text-white mb-3">
+                <p class="text-black dark:text-white mb-2">
                     Blits is easy and intuitive to work with. It’s a full featured TV App framework for building high performing Lightning based TV apps, designed with a focus on performance.
                 </p>
                 <!-- <ul class="ml-5 list-disc list-outside">
@@ -40,9 +40,10 @@ const blits = {
                         {{ p }}
                     </li>
                 </ul> -->
-                <div class="flex justify-center place-items-center mt-6 space-x-3">
+                <div class="flex flex-col mt-2 items-start space-y-3 w-full">
                     <LinkButton :href="blits.url" target="_blank" label="Learn more"></LinkButton>
                     <LinkButton :href="blits.appUrl" target="_blank" label="Example App"></LinkButton>
+                    <LinkButton href="/blits-components" target="_blank" label="Components"></LinkButton>
                 </div>
             </div>
             <div class="lg:col-span-2 flex items-center justify-center w-full">
