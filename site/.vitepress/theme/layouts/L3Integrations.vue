@@ -30,7 +30,7 @@ const page = {
     integrations: [
         {
             name: 'Solid',
-            url: 'https://github.com/lightning-js/solid',
+            url: 'https://github.com/lightning-tv/solid',
             logo: logo_solidjs_light,
             darkLogo: logo_solidjs_dark,
         },
