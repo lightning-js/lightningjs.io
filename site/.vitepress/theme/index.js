@@ -27,7 +27,6 @@ import L2Layout from './layouts/L2Layout.vue';
 import BlitsComponentsLayout from './layouts/BlitsComponentsLayout.vue';
 
 import FancyBackground from './components/home/FancyBackground.vue';
-import L3Integrations from './layouts/L3Integrations.vue';
 
 export default {
   extends: Theme,
@@ -42,7 +41,6 @@ export default {
     app.component('blogs', BlogsLayout)
     app.component('home2', HomeLayout)
     app.component('l2layout', L2Layout)
-    app.component('integrations', L3Integrations)
     app.component('FancyBackground', FancyBackground)
   }
 }

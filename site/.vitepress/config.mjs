@@ -79,12 +79,6 @@ export default defineConfig({
               { text: 'Lightning CLI', link: '/docs/#/lightning-cli-reference/index', target: '_blank' },
               { text: 'Lightning UI', link: '/docs/#/lightning-ui-reference/index', target: '_blank' },
             ]
-          },
-          {
-            text: 'Other',
-            items: [
-              { text: 'L3 Third Party Integrations', link: '/other-integrations'}
-            ]
           }
         ]
       },
