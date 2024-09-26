@@ -43,7 +43,7 @@ const blits = {
                 <div class="flex flex-col mt-2 items-start space-y-3 w-full">
                     <LinkButton :href="blits.url" target="_blank" label="Learn more"></LinkButton>
                     <LinkButton :href="blits.appUrl" target="_blank" label="Example App"></LinkButton>
-                    <LinkButton href="/blits-components" target="_blank" label="Components"></LinkButton>
+                    <LinkButton href="/blits-components" label="Components"></LinkButton>
                 </div>
             </div>
             <div class="lg:col-span-2 flex items-center justify-center w-full">
