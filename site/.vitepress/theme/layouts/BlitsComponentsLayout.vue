@@ -26,6 +26,7 @@ import inputPNG from '../../../assets/blits-components/input.png'
 import listPNG from '../../../assets/blits-components/list.png'
 import progressbarPNG from '../../../assets/blits-components/progressbar.png'
 import togglePNG from '../../../assets/blits-components/toggle.png'
+import keyboardPNG from '../../../assets/blits-components/keyboard.png'
 
 const gitPrefix = 'https://github.com/lightning-js/blits-components/blob/main/src/components/'
 
@@ -50,12 +51,17 @@ const page = {
             url: gitPrefix + 'Grid.js',
             exampleImg: gridPNG
         },
-        
         {
             name: 'Input',
             description: '<i>Capture information from your users?</i><br />The input component is handy for when you need to create a search view, or sign in page. This component also supports masked input mode in case you need to shield passwords',
             url: gitPrefix + 'Input.js',
             exampleImg: inputPNG
+        },
+        {
+            name: 'Keyboard',
+            description: '<i>Need an on-screen Keyboard?</i><br />With the Keyboard component you can quickly set up a new search view. You can easily combine this component with the Input component.',
+            url: gitPrefix + 'Input.js',
+            exampleImg: keyboardPNG
         },
         {
             name: 'Checkbox',
