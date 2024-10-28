@@ -37,6 +37,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component('blits-components', BlitsComponentsLayout)
+
     app.component('blog', BlogLayout)
     app.component('blogs', BlogsLayout)
     app.component('home2', HomeLayout)
