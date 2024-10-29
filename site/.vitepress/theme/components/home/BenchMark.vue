@@ -4,12 +4,10 @@ import Performance from '../../../../assets/home/framework_performance.jpeg'
 import LinkButton from './LinkButton.vue';
 
 const blits = {
-    url: 'https://lightning-js.github.io/benchmark/',
+    url: 'https://lightningjs.io/blogs/roadToPerformance.html',
     title: 'The Most Efficient Framework for TV Experiences',
-    description: `Blits is the most efficient framework for contained rendering, optimized for large-screen applications. With the lowest memory footprint and fully fine-grained reactivity, it delivers high performance for TV experiences.
-As part of the Lightning 3 project we have created a TV App Framework optimized for the Lightning Renderer.`,
+    description: `Blits is the most efficient framework for contained rendering, optimized for large-screen applications. With the lowest memory footprint and fully fine-grained reactivity, it delivers high performance for TV experiences.`,
     img: Performance,
-  
 }
 </script>
 
@@ -25,7 +23,7 @@ As part of the Lightning 3 project we have created a TV App Framework optimized 
                     {{ blits.description }}
                 </p>
                 <div class="flex flex-col mt-2 items-start space-y-3 w-full">
-                    <LinkButton :href="blits.url" target="_blank" label="Show more Benchmarks"></LinkButton>
+                    <LinkButton :href="blits.url" target="_blank" label="Read more"></LinkButton>
                 </div>
             </div>
         </div>

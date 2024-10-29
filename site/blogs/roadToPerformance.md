@@ -68,6 +68,10 @@ To make the framework familiar, similar patterns for how components are structur
 
 Lightning 3 is a high-performance, niche project designed for a very specific market: immediate WebGL rendering on highly resource-constrained devices. As such, we went to greater lengths than usual to ensure optimal performance on our target devices.
 
+<img src="/assets/home/framework_performance.jpeg" class="rounded-lg w-full" />
+
+All this payed off in turning Lightning 3 Blits into the fastest framework for immediate rendering through WebGL. For more information please find the benchmarks <a href="https://lightning-js.github.io/benchmark/">here</a>.
+
 Specifically built for big-screen experiences on resource-constrained devices, Lightning 3 provides developers with a familiar, web-reactive framework to build their applications. This allows developers to benefit from a high-performance immediate rendering library without needing deep knowledge of low-level JIT optimizations.
 
 Lightning 3 strikes a balance between a highly optimized, 80s/90s-inspired game engine and a modern-day reactive web programming syntax, delivering high-fidelity user experiences for resource-constrained big-screen devices.
