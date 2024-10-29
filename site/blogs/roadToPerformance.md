@@ -9,8 +9,10 @@ author: Wouter-lucas van Boesschoten
 ## Blits: Unlocking Performance in Your Big Screen Experience
 
 **Performance-obsessed technology for immediate rendering.**
-
-<img src="/assets/home/blits-logo.png" class="rounded-lg w-full" />
+<div class="flex flex-col justify-center items-center mt-10">
+    <img class="stretch-0 w-auto max-h-40 hidden dark:block" src="/assets/home/blits-logo-white.png" alt="framework logo" />
+    <img class="stretch-0 w-auto max-h-40 dark:hidden" src="/assets/home/blits-logo.png" alt="framework logo" />
+</div>
 
 Blits is a brand new (well, 1 year old at the time of writing) JavaScript Application Development UI library for Lightning 3. Where Lightning 2 had a built-in application development syntax, Lightning 3 is split into two main building blocks: the renderer and Blits. This separation provides more flexibility and iterability between the two foundational pillars behind Lightning 3.
 
@@ -26,11 +28,11 @@ Although the trend of "going green" is slowly bringing the art of writing more p
 
 The art of writing performant code for super-constrained devices slowly died in the late 90s. Before that, game systems like Atari, Nintendo, and early PC game engines were masterpieces of performance optimization, pushing the boundaries of what was possible. These efforts often led to crazy code patterns, many at the expense of readability (sorry, TypeScript). But with the rise of systems like the PlayStation 3, Xbox 360, and more powerful gaming PCs (RIP Voodoo Banshee with 3dfx Glide), the need for such intricate optimization began to fade.
 
-We've had a few sessions where we revisited old 80s/90s game code just for the learnings. Sure, applying the same patterns in JavaScript isn’t always compatible—the language is just higher level than old C code—but some patterns still apply, and valuable lessons can be learned. By gaining a deeper understanding of the JIT tiers and how JavaScript engines interpret code, we were able to push performance for Lightning 3 Blits to its limits. This was no easy feat, and there’s always more to optimize, but it did lead to the fastest immediate rendering system available for JavaScript.
+We've had a few sessions where we revisited old 80s/90s game code just for the learnings. Sure, applying the same patterns in JavaScript isn’t always compatible. The language is just higher level than old C code, but some patterns still apply, and valuable lessons can be learned. By gaining a deeper understanding of the JIT tiers and how JavaScript engines interpret code, we were able to push performance for Lightning 3 Blits to its limits. This was no easy feat, and there’s always more to optimize, but it did lead to the fastest immediate rendering system available for JavaScript.
 
 # The JavaScript Compiler
 
-Life in JavaScript is good—no worries about low-level tasks such as allocating/freeing memory, dealing with pointers, or thread locks. Easy peasy, right? Not if you want to achieve the absolute maximum performance. We’ve spent more time than we’re willing to admit benchmarking chunks of code. Every JIT (Just-In-Time) compiler has different strategies (V8 vs. JavaScriptCore), and many of our target devices use much older browsers, sometimes dating back over 10 years. Not only that, but Smart TVs almost always run in 32-bit userland, meaning the browser will also run in 32-bit. Meanwhile, in the desktop/mobile space, nearly all devices are 64-bit by now.
+Life in JavaScript is good, no worries about low-level tasks such as allocating/freeing memory, dealing with pointers, or thread locks. Easy peasy, right? Not if you want to achieve the absolute maximum performance. We’ve spent more time than we’re willing to admit benchmarking chunks of code. Every JIT (Just-In-Time) compiler has different strategies (V8 vs. JavaScriptCore), and many of our target devices use much older browsers, sometimes dating back over 10 years. Not only that, but Smart TVs almost always run in 32-bit userland, meaning the browser will also run in 32-bit. Meanwhile, in the desktop/mobile space, nearly all devices are 64-bit by now.
 
 This matters because most modern browsers tend to focus on 64-bit-based JIT compilers, which means newer JIT optimizations are done exclusively for 64-bit systems. Not every project receives the same 32-bit backporting love. For example, JavaScriptCore’s FTL optimization tier has been available for 64-bit for several years, while the 32-bit version is still waiting to be finished. This might sound trivial, but it isn’t. It means your TV app experience isn’t going to get the same JavaScript compiler optimizations as you would on mobile or desktop.
 
