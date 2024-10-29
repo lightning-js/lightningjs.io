@@ -6,7 +6,7 @@ import LinkButton from './LinkButton.vue';
 const blits = {
     url: 'https://lightningjs.io/blogs/roadToPerformance.html',
     title: 'The Most Efficient Framework for TV Experiences',
-    description: `Blits is the most efficient framework for contained rendering, optimized for large-screen applications. With the lowest memory footprint and fully fine-grained reactivity, it delivers high performance for TV experiences.`,
+    description: `Blits is the most efficient framework for immediate rendering, optimized for large-screen applications. With the lowest memory footprint and fully fine-grained reactivity, it delivers high performance for TV experiences.`,
     img: Performance,
 }
 </script>
