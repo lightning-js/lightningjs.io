@@ -13,12 +13,12 @@ const blits = {
 
 <template>
     <section class="flex flex-col items-center gap-8 w-11/12">
-        <SectionHeader :title="blits.title" />
+        <SectionHeader :title="blits.title" description=""/>
         <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-5">  
             <div class="lg:col-span-2 flex items-center justify-center w-full">
                 <img class="rounded-md" :src="Performance" alt="beanchmark framework">
             </div>  
-            <div class="flex flex-col w-full p-4 h-full justify-center items-center md:items-start gap-4">
+            <div class="flex flex-col items-center justify-center">
                 <p class="text-black dark:text-white mb-2">
                     {{ blits.description }}
                 </p>
