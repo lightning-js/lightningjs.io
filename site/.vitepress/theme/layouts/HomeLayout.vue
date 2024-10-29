@@ -8,6 +8,7 @@ import JoinDiscord from '../components/home/JoinDiscord.vue'
 import LegacyBlock from '../components/home/LegacyBlock.vue'
 import BlitsContent from '../components/home/BlitsContent.vue'
 import AnnouncementBar  from '../components/home/AnnouncementBar.vue'
+import BenchMark  from '../components/home/BenchMark.vue'
 
 
 </script>
@@ -18,6 +19,7 @@ import AnnouncementBar  from '../components/home/AnnouncementBar.vue'
     <LightingjsInfo class="mt-24"/>
     <BlitsContent/>
     <AnnouncementBar/>
+    <BenchMark/>
     <NewFeature/>
     <Quote/>
     <LegacyBlock/>
