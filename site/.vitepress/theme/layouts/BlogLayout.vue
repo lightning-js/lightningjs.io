@@ -20,8 +20,8 @@ import { useData } from 'vitepress';
 const { frontmatter } = useData();
 </script>
 <template>
-    <div class="mx-auto max-w-screen-md pt-12">
-        <div class="flex flex-col">
+    <div class="mx-auto max-w-screen-lg relative flex flex-col items-center pt-12">
+        <div class="flex flex-col w-11/12">
           <span class="text-sm font-light">Date: {{frontmatter.date}}</span>
           <span class="text-sm font-light">Author: {{frontmatter.author}}</span>
           <span class="text-4xl font-bold pt-3">{{ frontmatter.title }}</span>
@@ -29,6 +29,6 @@ const { frontmatter } = useData();
        
      
         <!--Markdown content-->
-        <Content class="vp-doc my-8"/>
+        <Content class="vp-doc my-8 w-11/12"/>
     </div>  
 </template>
