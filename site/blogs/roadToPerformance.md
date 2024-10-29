@@ -6,9 +6,11 @@ date: 2024-10-28
 author: Wouter-lucas van Boesschoten
 ---
 
-# Blits: Unlocking Performance in Your Big Screen Experience
+## Blits: Unlocking Performance in Your Big Screen Experience
 
 **Performance-obsessed technology for contained rendering.**
+
+<img src="/assets/home/blits-logo.png" class="rounded-lg w-full" />
 
 Blits is a brand new (well, 1 year old at the time of writing) JavaScript Application Development UI library for Lightning 3. Where Lightning 2 had a built-in application development syntax, Lightning 3 is split into two main building blocks: the renderer and Blits. This separation provides more flexibility and iterability between the two foundational pillars behind Lightning 3.
 
@@ -19,6 +21,8 @@ But why is this a niche? Well, the performance of a Smart TV is somewhere betwee
 # The Lost Art of Performance
 
 Although the trend of "going green" is slowly bringing the art of writing more performant code back into the spotlight, it's important to note the shift. The post-2000s and 2010s saw wild growth in endless resources, but these are now increasingly becoming a concern due to their carbon footprint. Efforts to reduce this are pushing tech to be more and more "green." However, in our niche market of highly resource constrained TV devices, the challenges are on a whole different level. This isn't just about going green, it's like we're back in the 80's, where you're working with a very constrained device and need to write a version of Mario Kart that runs consistently above 24 FPS.
+
+<img src="/assets/roadToPerformance/car-tron.png" class="rounded-lg w-full" />
 
 The art of writing performant code for super-constrained devices slowly died in the late 90s. Before that, game systems like Atari, Nintendo, and early PC game engines were masterpieces of performance optimization, pushing the boundaries of what was possible. These efforts often led to crazy code patterns, many at the expense of readability (sorry, TypeScript). But with the rise of systems like the PlayStation 3, Xbox 360, and more powerful gaming PCs (RIP Voodoo Banshee with 3dfx Glide), the need for such intricate optimization began to fade.
 
@@ -33,6 +37,8 @@ This matters because most modern browsers tend to focus on 64-bit-based JIT comp
 As a result, we’re sometimes forced to lean into older patterns just to squeeze out every single grain of performance on older devices. That’s what makes the space Lightning operates in such an extreme niche compared to the broader desktop/mobile landscape. This is how we’re able to deliver the performance we promise with Lightning 3’s Blits application development framework.
 
 Many, if not all, other JavaScript frameworks focus exclusively on desktop and mobile. Getting great performance on the latest 64-bit Chrome 128+ is fantastic, but it doesn’t translate into the same performance on a 10-year-old browser running on a constrained Smart TV with only half of the JIT performance tiers you’d normally expect.
+
+<img src="/assets/roadToPerformance/porsche_vs_tesla.png" class="rounded-lg w-full" />
 
 # Contained Rendering
 
