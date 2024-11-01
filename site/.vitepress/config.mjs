@@ -32,14 +32,13 @@ export default defineConfig({
   ],
 
   transformPageData: (pageData) => {
-    const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
     const {title: fmTitle, description: fmDesc} = pageData.frontmatter;
     const {title: pTitle, description: pDesc, relativePath} = pageData;
     pageData.frontmatter.head ??= [];
-    pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
+    
 
     let title = 'Lightningjs'
-    let description = 'Nexus of Information'
+    let description = 'Lightning 3 documentation'
     let image = '/favicons/lng_1200x630.jpg'
 
     if(fmTitle) {
@@ -52,7 +51,8 @@ export default defineConfig({
       title = pTitle + extra
       description = pDesc && pDesc.length > 0 ? pDesc : description
     }
-
+    const conicalPath = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '.html');
+    pageData.frontmatter.head.push(['meta', {property: 'og:url', content: 'https://www.lightningjs.io/' + conicalPath}])
     pageData.frontmatter.head.push(['meta', {property: 'og:title', content: title}])
     pageData.frontmatter.head.push(['meta', {property: 'og:type', content: 'website'}])
     pageData.frontmatter.head.push(['meta', {property: 'og:description', content: description}])
