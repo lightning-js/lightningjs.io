@@ -38,22 +38,27 @@ export default defineConfig({
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push(['meta', {name: 'og:url', content: new URL(conicalPath, import.meta.url)}])
 
+    let title = 'Lightningjs'
+    let description = 'Nexus of Information'
+    let image = '/favicons/lng_1200x630.jpg'
+
     if(fmTitle) {
-      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: fmTitle + ' | LightningJS'}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: fmDesc}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: pageData.frontmatter.linkImage || '/favicons/lng_1200x630.jpg'}])
+      title = fmTitle + ' | LightningJS'
+      description = fmDesc && fmDesc.length > 0 ? fmDesc : description
+      image = pageData.frontmatter.linkImage || image
     }
     else if(pTitle && pTitle.length > 0) {
       const extra = ' | ' + (relativePath.indexOf('blits') > -1 ? 'Blits' : 'LightningJS')
-      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: pTitle + extra}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: pDesc}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: '/favicons/lng_1200x630.jpg'}])
+      title = pTitle + extra
+      description = pDesc && pDesc.length > 0 ? pDesc : description
     }
-    else {
-      pageData.frontmatter.head.push(['meta', {name: 'og:title', content: 'Lightningjs'}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:description', content: 'Nexus of Information'}])
-      pageData.frontmatter.head.push(['meta', {name: 'og:image', content: '/favicons/lng_1200x630.jpg'}])
-    }
+
+    pageData.frontmatter.head.push(['meta', {name: 'og:title', content: title}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:description', content: description}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: image}])
+    pageData.frontmatter.head.push(['meta', {name: 'twitter:card', content: image}])
+
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
