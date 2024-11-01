@@ -53,18 +53,18 @@ export default defineConfig({
       description = pDesc && pDesc.length > 0 ? pDesc : description
     }
 
-    pageData.frontmatter.head.push(['meta', {name: 'og:title', content: title}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:description', content: description}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image', content: image}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image:type', content: "image/jpeg"}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image:width', content: "1200"}])
-    pageData.frontmatter.head.push(['meta', {name: 'og:image:height', content: "630"}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:title', content: title}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:type', content: 'website'}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:description', content: description}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:image', content: image}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:image:type', content: "image/jpeg"}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:image:width', content: "1200"}])
+    pageData.frontmatter.head.push(['meta', {property: 'og:image:height', content: "630"}])
 
-    pageData.frontmatter.head.push(['meta', {name: 'twitter:card', content: description}])
-    pageData.frontmatter.head.push(['meta', {name: 'twitter:title', content: title}])
-    pageData.frontmatter.head.push(['meta', {name: 'twitter:description', content: description}])
-    pageData.frontmatter.head.push(['meta', {name: 'twitter:image:src', content: image}])
+    pageData.frontmatter.head.push(['meta', {property: 'twitter:card', content: description}])
+    pageData.frontmatter.head.push(['meta', {property: 'twitter:title', content: title}])
+    pageData.frontmatter.head.push(['meta', {property: 'twitter:description', content: description}])
+    pageData.frontmatter.head.push(['meta', {property: 'twitter:image:src', content: image}])
 
   },
   themeConfig: {
