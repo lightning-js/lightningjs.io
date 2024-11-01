@@ -57,11 +57,14 @@ export default defineConfig({
     pageData.frontmatter.head.push(['meta', {name: 'og:type', content: 'website'}])
     pageData.frontmatter.head.push(['meta', {name: 'og:description', content: description}])
     pageData.frontmatter.head.push(['meta', {name: 'og:image', content: image}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image:type', content: "image/jpeg"}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image:width', content: "1200"}])
+    pageData.frontmatter.head.push(['meta', {name: 'og:image:height', content: "630"}])
 
     pageData.frontmatter.head.push(['meta', {name: 'twitter:card', content: description}])
     pageData.frontmatter.head.push(['meta', {name: 'twitter:title', content: title}])
     pageData.frontmatter.head.push(['meta', {name: 'twitter:description', content: description}])
-    pageData.frontmatter.head.push(['meta', {name: 'twitter:image', content: image}])
+    pageData.frontmatter.head.push(['meta', {name: 'twitter:image:src', content: image}])
 
   },
   themeConfig: {
