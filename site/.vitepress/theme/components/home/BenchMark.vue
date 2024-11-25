@@ -15,14 +15,14 @@ const blits = {
     <section class="flex flex-col items-center gap-8 w-11/12">
         <SectionHeader :title="blits.title" description=""/>
         <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-5">  
-            <div class="lg:col-span-2 flex items-center justify-center w-full">
+            <div class="md:col-span-2 flex items-center justify-center w-full">
                 <img class="rounded-md" :src="Performance" alt="beanchmark framework">
             </div>  
             <div class="flex flex-col items-center justify-center">
                 <p class="text-black dark:text-white mb-2">
                     {{ blits.description }}
                 </p>
-                <div class="flex flex-col mt-2 items-start space-y-3 w-full">
+                <div class="flex flex-col mt-2 justify-center md:items-start space-y-3 w-full">
                     <LinkButton :href="blits.url" target="_blank" label="Read more"></LinkButton>
                 </div>
             </div>
