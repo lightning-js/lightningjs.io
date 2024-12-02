@@ -3,12 +3,14 @@
 import DataFooter from './DataFooter.vue';
 import github_mark from '../../../../assets/home/github-mark-white.svg';
 import github_dark from '../../../../assets/home/github-mark-dark.svg';
-import discord_white from '../../../../assets/home/discord-mark-white.png'
-import discord_dark from '../../../../assets/home/discord-mark-dark.png'
+import discord_white from '../../../../assets/home/discord-mark-white.png';
+import discord_dark from '../../../../assets/home/discord-mark-dark.png';
+import rdk_icon from '../../../../assets/home/Rdk-icon.png';
 
 const dataFooters = [
     { title: 'Blits TV App Framework', url:'/v3-docs/blits/getting_started/intro'},
-    { title: 'Renderer', url: 'https://github.com/lightning-js/renderer'}
+    { title: 'Renderer', url: 'https://github.com/lightning-js/renderer'},
+
 ]
 
 const dataLinks = [
@@ -30,6 +32,8 @@ const dataLinks = [
                 </div>
              </div>
             <p class="px-5 text-black dark:text-slate-300 text-xs pt-4">Released under the Apache 2.0 license Copyright © 2023 Lightingjs - Comcast</p>
+            <p class="px-5 text-black dark:text-slate-300 text-xs pt-4">Lightning® is a registered trademark of RDK Management</p>
+            <a href="https://rdkcentral.com" target="_blank"><img alt="lng logo" class="w-10 pt-2" :src="rdk_icon"/></a>
         </div>
     </section>
-</template>
+</template> 
