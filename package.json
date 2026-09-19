@@ -10,7 +10,7 @@
     "docs:preview": "vitepress preview site"
   },
   "devDependencies": {
-    "autoprefixer": "^10.5.5",
+    "autoprefixer": "^10.6.1",
     "flexsearch": "^0.8.212",
     "fs-extra": "^11.4.0",
     "postcss": "^8.5.28",
