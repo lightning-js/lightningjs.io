@@ -10,14 +10,14 @@
     "docs:preview": "vitepress preview site"
   },
   "devDependencies": {
-    "autoprefixer": "^10.5.5",
+    "autoprefixer": "^10.6.1",
     "fs-extra": "^11.4.0",
     "postcss": "^8.5.28",
     "shelljs": "^0.10.0",
     "simple-git": "^3.36.0",
     "tailwindcss": "^3.4.3",
     "vitepress": "^1.6.4",
-    "vue": "^3.3.4"
+    "vue": "^3.5.43"
   },
   "postcss": {
     "plugins": {
@@ -31,6 +31,6 @@
     "delaunay-fast": "^1.0.1",
     "pagefind": "^1.5.2",
     "shiki-es": "^0.14.0",
-    "vitepress-plugin-pagefind": "^0.4.24"
+    "vitepress-plugin-pagefind": "^0.4.25"
   }
 }
