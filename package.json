@@ -10,20 +10,19 @@
     "docs:preview": "vitepress preview site"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.5.5",
-    "flexsearch": "^0.8.212",
     "fs-extra": "^11.4.0",
     "postcss": "^8.5.28",
     "shelljs": "^0.10.0",
     "simple-git": "^3.36.0",
     "tailwindcss": "^4.3.3",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-search": "^1.0.4-alpha.22",
     "vue": "^3.3.4"
   },
   "postcss": {
     "plugins": {
-      "tailwindcss": {},
+      "@tailwindcss/postcss": {},
       "autoprefixer": {}
     }
   },
