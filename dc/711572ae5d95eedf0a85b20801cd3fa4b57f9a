@@ -1,0 +1,18 @@
+package-lock.json
+  h_1397e19fb0273b 20,271-283,764-795,802-812,1609-1891,2563-2572,2614-2627,3078-3087,3175-3436,4355-4368
+package.json
+  h_1397e19fb0273b 13,25
+site/.vitepress/theme/css/tailwind.postcss
+  h_1397e19fb0273b 1,3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc711572ae5d95eedf0a85b20801cd3fa4b57f9a",
+  "prompts": {},
+  "humans": {
+    "h_1397e19fb0273b": {
+      "author": "Ugur Aslan <ugur@uguraslan.net>"
+    }
+  }
+}
